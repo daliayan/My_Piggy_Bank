@@ -1,0 +1,16 @@
+Piggy Bank
+            Has many funds
+                Name
+                Fund_amount
+    Create new piggy bank
+    Delete piggy bank
+
+
+Funds
+Belongs to Piggy Bank
+Bank_id
+Dollar_amount
+Add $$ amount
+Delete $$ amount
+
+Edit $$ amount
