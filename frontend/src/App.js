@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import  NavBar from './components/NavBar';
 import BankContainer from './containers/BankContainer';
+import FundContainter from './containers/FundContainer';
 
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         <Router>
           <NavBar />
           <BankContainer />
+          <FundContainter />
         This
       
         </Router>

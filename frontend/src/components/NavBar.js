@@ -14,7 +14,6 @@ function NavBar() {
       
         <NavLink to="/banks/new"
           activeStyle={{
-          background: 'pink',
           fontSize: 30}}>
           Create Piggy Bank</NavLink>
   
