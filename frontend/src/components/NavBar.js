@@ -8,7 +8,7 @@ function NavBar() {
       <NavLink
           to="/banks"
           activeStyle={{
-            background: 'pink',
+            // background: 'pink',
             fontSize: 30}}
         >Home    </NavLink>
       

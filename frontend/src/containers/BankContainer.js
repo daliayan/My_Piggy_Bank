@@ -5,9 +5,9 @@ import React, { Component } from 'react';
 // import BankForm from './components/BankForm';
 
 class BankContainer extends Component {
-    // componentDidMount(){
-    //     console.log("My data is connected");
-    // }
+    componentDidMount(){
+        console.log("My data is connected");
+    }
 
     render(){
         // const banks = this.props.banks.map(bank => (
@@ -17,9 +17,10 @@ class BankContainer extends Component {
         //     />
         // ))
         return (
-        <div>
+        <div id="bank-container">
             <p>
-                Bank container
+              BANK CARD 
+              {/* <BankCard /> */}
             </p>
         </div>
         )

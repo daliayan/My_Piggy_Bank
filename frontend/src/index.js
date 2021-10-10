@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import background from "./images/pink.jpg";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App style={{ 
+        backgroundImage: `url(${background}` }}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
