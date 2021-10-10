@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 //fetching banks from backend
 
-class GetBank extends Component {
-    constructor(){
-        super();
-        this.state = {
-            name: '',
-        };
-    };
+class BankCard extends Component {
+
+    // state = {
+    //     banks: [],
+    // };
 
     // handle submit method
 
@@ -15,19 +13,29 @@ class GetBank extends Component {
 
     //rendering
 
-    render(){
-        return (
-            <div>
-                <p>
-                    
-                </p>
-            </div>
-        )
+    componentDidMount(){
+        fetch('http://localhost:3000/banks')
+        .then(resp => resp.json())
+        .then(json => {
+            this.setState({
+                banks: json
+            })
+        })
     }
+
+    // render(){
+    //     return (
+    //         <div>
+    //             <p>
+                    
+    //             </p>
+    //         </div>
+    //     )
+    // }
 
     //mapping prop to dispatch
 
     //exporting
 }
 
-export default GetBank;
+export default BankCard;
