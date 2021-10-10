@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//fetching banks from backend
 
 class GetBank extends Component {
     constructor(){
@@ -18,7 +19,7 @@ class GetBank extends Component {
         return (
             <div>
                 <p>
-                    ABILITY TO CREATE PIGGY BANK
+                    
                 </p>
             </div>
         )
