@@ -13,25 +13,25 @@ class BankCard extends Component {
 
     //rendering
 
-    componentDidMount(){
-        fetch('http://localhost:3000/banks')
-        .then(resp => resp.json())
-        .then(json => {
-            this.setState({
-                banks: json
-            })
-        })
-    }
-
-    // render(){
-    //     return (
-    //         <div>
-    //             <p>
-                    
-    //             </p>
-    //         </div>
-    //     )
+    // componentDidMount(){
+    //     fetch('http://localhost:3000/banks')
+    //     .then(resp => resp.json())
+    //     .then(json => {
+    //         this.setState({
+    //             banks: json
+    //         })
+    //     })
     // }
+
+    render(){
+        return (
+            <div>
+                <p>
+                    BANK CARD
+                </p>
+            </div>
+        )
+    }
 
     //mapping prop to dispatch
 
