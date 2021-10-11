@@ -1,6 +1,7 @@
 // This is where the piggy bank card will be displayed 
 
 import React, { Component } from 'react';
+import BankForm from '../components/BankForm';
 // import BankCard from './components/BankCard';
 // import BankForm from './components/BankForm';
 
@@ -21,6 +22,7 @@ class BankContainer extends Component {
             <p>
               BANK CARD 
               {/* <BankCard /> */}
+              <BankForm />
             </p>
         </div>
         )
