@@ -1,7 +1,7 @@
 // creating the CARD to hold the fund 
 
 import React, { Component } from 'react';
-// import FundCard from './components/FundCard';
+import FundCard from '../components/FundCard';
 
 class FundContainter extends Component {
 
@@ -11,7 +11,7 @@ class FundContainter extends Component {
                 <p>
                     This is where the Fund $$ amount card/image will be rendered
                     Fund Card
-                    {/* <FundCard /> */}
+                    <FundCard />
                 </p>
             </div>
         )

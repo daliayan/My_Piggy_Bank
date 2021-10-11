@@ -20,7 +20,6 @@ class BankContainer extends Component {
         return (
         <div id="bank-container">
             <p>
-              BANK CARD 
               {/* <BankCard /> */}
               <BankForm />
             </p>
