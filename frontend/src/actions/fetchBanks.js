@@ -1,6 +1,3 @@
-// import React from "react";
-// import thunk from "redux-thunk";
-
 export function fetchBanks(){
     return (dispatch) => {
         dispatch({ type: 'ADD_BANKS' });

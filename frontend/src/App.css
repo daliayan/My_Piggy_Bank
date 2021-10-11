@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(230, 204, 217);
+  background-color: rgb(233, 198, 215);
 }
 
 /* .App-logo {
@@ -14,12 +14,27 @@
   }
 }
 
-form {
+.nav{
+  /* text-align: center; */
+  text-decoration: none;
+  text-size-adjust: 30;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+.piggy-bank-form{
+  /* align-self: center; */
   display: inline-block;
   border-radius: 10%;
-  border-style: solid;
+  border-style: dashed;
   margin: 10px;
-  padding: 10px   
+  padding: 10px;
+  /* background-image: url('/images/piggy') */
+}
+
+form {
+  text-align: center;  
 }
 
 /* background: url("./images/soft-pink.jpeg") no-repeat center

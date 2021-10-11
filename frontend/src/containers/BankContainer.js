@@ -2,13 +2,13 @@
 
 import React, { Component } from 'react';
 import BankForm from '../components/BankForm';
-// import BankCard from './components/BankCard';
-// import BankForm from './components/BankForm';
+// import BankList from '../components/BankList';
+
 
 class BankContainer extends Component {
-    componentDidMount(){
-        console.log("My data is connected");
-    }
+    // componentDidMount(){
+    //     console.log("My data is connected");
+    // }
 
     render(){
         // const banks = this.props.banks.map(bank => (
@@ -20,8 +20,8 @@ class BankContainer extends Component {
         return (
         <div id="bank-container">
             <p>
-              {/* <BankCard /> */}
               <BankForm />
+              {/* <BankList /> */}
             </p>
         </div>
         )

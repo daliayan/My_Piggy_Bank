@@ -4,7 +4,7 @@ class BanksController < ApplicationController
 
     def index
         banks = Bank.all
-        render json: banks
+        render json: banks, except: [:created_at, :updated_at]
     end
 
     def show 
@@ -20,13 +20,13 @@ class BanksController < ApplicationController
         end
     end
 
-    def edit
-        bank = Bank.find(params[:id])
-    end
+    # def edit
+    #     bank = Bank.find(params[:id])
+    # end
 
     def update
-        @bank.update(bank_params)
-        if @bank.valid?
+        # @bank.update(bank_params)
+        if @bank.update(bank_params)
             render json: bank
         else
             render json: bank.errors

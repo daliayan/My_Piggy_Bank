@@ -4,17 +4,11 @@ import {NavLink} from 'react-router-dom';
 
 function NavBar() {
   return (
-      <div id="nav-bar">
-      <NavLink
-          to="/banks"
-          activeStyle={{
-            // background: 'pink',
-            fontSize: 30}}
-        >Home    </NavLink>
+      <div id="nav-bar" className="nav">
+      <NavLink to="/banks"
+        >Home   </NavLink>
       
-        <NavLink to="/banks/new"
-          activeStyle={{
-          fontSize: 30}}>
+        <NavLink to="/banks/new">
           Create Piggy Bank</NavLink>
   
       </div>

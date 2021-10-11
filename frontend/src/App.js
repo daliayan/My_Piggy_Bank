@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import  NavBar from './components/NavBar';
 // import {fetchBanks} from '../actions/fetchBanks';
+// import BankList from '../components/BankList';
 import BankContainer from './containers/BankContainer';
 import FundContainter from './containers/FundContainer';
 
@@ -36,7 +37,7 @@ renderBanks = () => {
           <NavBar />
           <BankContainer />
           <FundContainter />
-      
+          {/* <BankList /> */}
         </Router>
       </div>
     );

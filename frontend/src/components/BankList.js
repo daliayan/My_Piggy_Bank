@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import thunk from "redux-thunk";
+
 //fetching banks from backend
 
 class BankList extends Component {
 
+    listBanks = () => {
+        return this.props.banks.map(bank => <div> {bank.name}</div>)
+    }
 
     render(){
         return (
@@ -12,10 +15,6 @@ class BankList extends Component {
             </div>
         )
     }
-
-    //mapping prop to dispatch
-
-    //exporting
 }
 
 export default BankList;
