@@ -1,8 +1,6 @@
-// This is where the piggy bank card will be displayed 
-
 import React, { Component } from 'react';
 import BankForm from '../components/BankForm';
-// import BankList from '../components/BankList';
+import BankList from '../components/BankList';
 
 
 class BankContainer extends Component {
@@ -11,17 +9,11 @@ class BankContainer extends Component {
     // }
 
     render(){
-        // const banks = this.props.banks.map(bank => (
-        //     <BankCard 
-        //     name={bank.name}
-        //     gender={bank.gender}
-        //     />
-        // ))
         return (
         <div id="bank-container">
             <p>
+              <BankList />
               <BankForm />
-              {/* <BankList /> */}
             </p>
         </div>
         )

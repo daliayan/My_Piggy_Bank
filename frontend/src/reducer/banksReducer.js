@@ -6,7 +6,7 @@ const banksReducer = (state = {banks: [], loading: false}, action) => {
                 banks: [...state.banks],
                 loading: true
             }
-        case 'ADD_CATS':
+        case 'ADD_BANKS':
         return {
             ...state,
             banks: action.banks,

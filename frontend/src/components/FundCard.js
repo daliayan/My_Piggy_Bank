@@ -1,17 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 // assiging the $$ their values
 
-class FundCard extends Component {
+export default function FundCard(props) {
 
-    render(){
         return (
-        <div>
+        <div id="dollar-bills">
             <p>
-                NEED TO GET FUNDS AMOUNT
+                <div id="one-bill"> $1
+                    </div>
+                    <div id="five-bill"> $5
+                    </div>
+                    <div id="ten-bill"> $10
+                    </div>
+                    <div id="twentry-bill"> $20
+                    </div>
+                    <div> $50
+                    </div>
+                    <div> $100 {props.value}
+                    </div>
             </p>
         </div>
-        )
-    }
+    )
 }
-
-export default FundCard;

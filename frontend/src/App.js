@@ -2,46 +2,56 @@ import {Component} from 'react';
 import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import  NavBar from './components/NavBar';
-// import {fetchBanks} from '../actions/fetchBanks';
-// import BankList from '../components/BankList';
+// import {fetchBanks} from './actions/fetchBanks';
+import {connect} from "react-redux";
 import BankContainer from './containers/BankContainer';
 import FundContainter from './containers/FundContainer';
 
-
-
 class App extends Component {
+
+  state = {
+    banks: [],
+  }
   
+  componentDidMount(){
+    this.props.fetchBanks();
+  }
 
-  // componentDidMount(){
-  //   fetch('http://localhost:3000/banks')
-  //   .then(resp => resp.json())
-  //   .then((bankData) => {this.setState({ banks: bankData.banks
-  //       })
-  //   })
+
+  // onClick = () => {
+  //   this.props.fetchBanks(this.state.query)
   // }
-
-renderBanks = () => {
-    return this.state.banks.map((bank) => {
-        return (
-            <div className="bank-data">
-                <h3>{bank.name}</h3>
-            </div>
-        )
-    })
-}
 
   render(){
     return (
       <div className="App">
         <Router>
-          <NavBar />
-          <BankContainer />
-          <FundContainter />
-          {/* <BankList /> */}
+          <div>
+            <NavBar />
+          </div>
+          <div>
+            <BankContainer />
+          </div>
+          <div>
+            <FundContainter />
+          </div>
         </Router>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    banks: state.banks,
+    loading: state.loading
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchBanks: () => dispatch({type: 'ADD_BANKS'})
+  }
+}
+
+export default (connect(mapStateToProps, mapDispatchToProps)(App));

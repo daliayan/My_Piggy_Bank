@@ -1,21 +1,17 @@
 // creating the CARD to hold the fund 
-
-import React, { Component } from 'react';
+import React from 'react';
 import FundCard from '../components/FundCard';
+import {connect} from "react-redux";
 
-class FundContainter extends Component {
-
-    render(){
+const FundContainter = (props) => {
         return (
             <div>
                 <p>
-                    This is where the Fund $$ amount card/image will be rendered
-                    Fund Card
                     <FundCard />
+                    
                 </p>
             </div>
         )
-    }
 }
 
 export default FundContainter;
