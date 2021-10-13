@@ -10,6 +10,11 @@ import FundContainter from './containers/FundContainer';
 
 class App extends Component {
 
+  // constructor(props){
+  //   super()
+  //   this.state = {}
+  // }
+
   state = {
     banks: [],
   }

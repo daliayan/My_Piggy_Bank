@@ -1,7 +1,7 @@
 import React from 'react';
 // assiging the $$ their values
 
-export default function FundCard(props) {
+const FundCard =props => {
 
         return (
         <div id="dollar-bills">
@@ -26,3 +26,5 @@ export default function FundCard(props) {
         </div>
     )
 }
+
+export default FundCard;
