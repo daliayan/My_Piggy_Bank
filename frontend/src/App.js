@@ -5,6 +5,7 @@ import  NavBar from './components/NavBar';
 // import {fetchBanks} from './actions/fetchBanks';
 import {connect} from "react-redux";
 import BankContainer from './containers/BankContainer';
+import BankFormContainer from './containers/BankFormContainer';
 import FundContainter from './containers/FundContainer';
 
 class App extends Component {
@@ -33,7 +34,10 @@ class App extends Component {
             <BankContainer />
           </div>
           <div>
-            <FundContainter />
+          <BankFormContainer />
+          </div>
+          <div>
+          <FundContainter />
           </div>
         </Router>
       </div>

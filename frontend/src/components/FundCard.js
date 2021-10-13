@@ -12,11 +12,11 @@ export default function FundCard(props) {
                     </div>
                     <div id="ten-bill"> $10
                     </div>
-                    <div id="twentry-bill"> $20
+                    <div id="twenty-bill"> $20
                     </div>
-                    <div> $50
+                    <div id="fifty-bill"> $50
                     </div>
-                    <div> $100 {props.value}
+                    <div id="hundred-bill"> $100 {props.value}
                     </div>
             </p>
         </div>

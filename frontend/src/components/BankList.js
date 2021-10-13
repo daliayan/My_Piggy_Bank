@@ -10,10 +10,10 @@ class BankList extends Component {
     render(){
         return (
             <div className='bank-list'>
-                <p>
+                <h3>
                     {/* {this.listBanks()} */}
                     LIST OF BANK DATA BACKEND
-                </p>
+                </h3>
             </div>
         )
     }

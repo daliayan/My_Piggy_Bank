@@ -5,10 +5,9 @@ import {connect} from "react-redux";
 
 const FundContainter = (props) => {
         return (
-            <div>
+            <div id="fund-container" className="fund-container">
                 <p>
                     <FundCard />
-                    
                 </p>
             </div>
         )
