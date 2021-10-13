@@ -16,25 +16,20 @@
   }
 }
 
-.nav{
-  /* text-align: center; */
-  text-decoration: none;
-  text-size-adjust: 30;
-  margin: 10px;
-  padding: 10px;
-   /* display:flex; */
+.nav-bar{
+  overflow: hidden;
+  background-color: rgb(250, 222, 233);
+  padding: 5px; 
+  width: 100%;
 }
 
-.piggy-bank-form{
-  /* align-self: center; */
-  display: inline-block;
-  border-radius: 10%;
-  border-style: solid;
-  margin: 10px;
-  padding: 10px;
-  /* background-color: rgb(251, 158, 203); */
-  background: url(images/pink.jpg) no-repeat center center fixed; 
-  /* background-image: url('/images/piggy') */
+.nav-bar a{
+  float: center;
+  color: #3a0124;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 5px;
 }
 
 .bank-container{
@@ -45,11 +40,16 @@
   margin: 10px;
   padding: 10px;
   background: url(images/pink.jpg) no-repeat center center fixed; 
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
-  /* background-image: url('/images/piggy') */
+}
+
+.piggy-bank-form{
+  /* align-self: center; */
+  display: inline-block;
+  border-radius: 10%;
+  border-style: solid;
+  margin: 10px;
+  padding: 10px;
+  background: url(images/pink.jpg) no-repeat center center fixed; 
 }
 
 .fund-container{

@@ -7,7 +7,7 @@ export default class BankForm extends Component {
         return (
             <div>
                 <form className="piggy-bank-form">
-                    <h1>Make Your Own Piggy Bank</h1>
+                    <h1>Make Your Own Piggy Bank 🐷💰</h1>
                     {/* <img src="images/oink.jpg" alt='pig'></img> */}
                     <div>
                         <label htmlFor="name">Name: </label>
@@ -21,7 +21,7 @@ export default class BankForm extends Component {
                     <br></br>
                     <div>
                         <button>
-                            Create Piggy
+                            Create Piggy Bank
                         </button>
                     </div>
                 </form>
