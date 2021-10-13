@@ -7,6 +7,7 @@ import {connect} from "react-redux";
 import BankContainer from './containers/BankContainer';
 import BankFormContainer from './containers/BankFormContainer';
 import FundContainter from './containers/FundContainer';
+import BankList from './components/BankList';
 
 class App extends Component {
 
@@ -20,7 +21,7 @@ class App extends Component {
   }
   
   componentDidMount(){
-    this.props.fetchBanks();
+    fetchBanks();
   }
 
 
@@ -37,6 +38,9 @@ class App extends Component {
           </div>
           <div>
             <BankContainer />
+          </div>
+          <div>
+          <BankList />
           </div>
           <div>
           <BankFormContainer />

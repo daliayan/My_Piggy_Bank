@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+// import {fetchBanks} from './actions/fetchBanks';
 //fetching banks from backend
 
 class BankList extends Component {
     // listBanks = () => {
-    //     return this.props.banks.map((bank) => <div> {bank.name}</div>)
+        // return this.props.banks.map((bank) => <div> {bank.name}</div>)
+    // }
+
+    //  listBanks = () => {
+    //         console.log(this.fetchBanks())
     // }
 
     state = {

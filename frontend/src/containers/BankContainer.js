@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BankList from '../components/BankList';
+// import {fetchBanks} from './actions/fetchBanks';
 
 
 class BankContainer extends Component {
@@ -11,6 +12,7 @@ class BankContainer extends Component {
         return (
         <div id="bank-container" className="bank-container">
             <BankList />
+            {/* list={this.props.banks} */}
         </div>
         )
     }
