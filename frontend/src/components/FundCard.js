@@ -5,20 +5,24 @@ export default function FundCard(props) {
 
         return (
         <div id="dollar-bills">
-            <p>
-                <div id="one-bill"> $1
-                    </div>
-                    <div id="five-bill"> $5
-                    </div>
-                    <div id="ten-bill"> $10
-                    </div>
-                    <div id="twenty-bill"> $20
-                    </div>
-                    <div id="fifty-bill"> $50
-                    </div>
-                    <div id="hundred-bill"> $100 {props.value}
-                    </div>
-            </p>
+            
+                <p id="one-bill"> $1
+                </p>
+
+                <p id="five-bill"> $5
+                </p>
+            
+                <p id="ten-bill"> $10
+                </p>
+
+                <p id="twenty-bill"> $20
+                </p>
+
+                <p id="fifty-bill"> $50
+                </p>
+
+                <p id="hundred-bill"> $100 {props.value}
+                </p>
         </div>
     )
 }

@@ -19,4 +19,12 @@ class BankList extends Component {
     }
 }
 
+// function BankListItems(props){
+//     const listedBanks =  props.banks.map((bank) => <div> {bank.name}</div>);
+// }
+
+// function BankListItems(props){
+    //     const listedBanks =  props.banks.map((bank) => <div> {bank.name}</div>);
+    // }
+
 export default BankList;
