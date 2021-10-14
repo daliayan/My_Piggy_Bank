@@ -3,19 +3,27 @@ import BankList from '../components/BankList';
 
 class BankContainer extends Component {
     componentDidMount(){
-        console.log("My data is connected");
+        fetch('http://localhost:3000/banks') 
+        .then(resp => resp.json())
+        .then(banks => this.setState({bankData: banks} ))
+        // console.log("My data is connected");
     }
 
-    // listBanks = () => {
-    //     return this.props.banks.map((bank) => <div> {bank.name}</div>)
-    // }
+    state = {
+        bankData: []
+    }
+
+    listBanks = () => {
+        return this.state.bankData.map((bank) => <div> {bank.name}</div>)
+    }
 
     render(){
+        console.log(this.state)
         return (
         <div id="bank-container" className="bank-container">
             <BankList />
             {/* list={this.props.banks} */}
-            {/* {this.listBanks()} */}
+            {this.listBanks()}
             {/* {this.props.name}
             {this.props.gender} */}
         </div>

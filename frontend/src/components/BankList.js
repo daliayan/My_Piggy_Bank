@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 class BankList extends Component {
     // listBanks = () => {
-    //     return this.props.banks.map((bank) => <div> {bank.name}</div>)
+    //     return this.state.banks.map((bank) => <div> {bank.name}</div>)
     // }
 
     state = {

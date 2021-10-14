@@ -11,12 +11,12 @@ export default class BankForm extends Component {
                     <h1 className="piggy-bank-form">Make Your Own Piggy Bank 🐷💰</h1>
                     {/* <img src="images/oink.jpg" alt='pig'></img> */}
                     <br></br>
-                    <div className="piggy-bank-form">
+                    <div className="piggy-bank-form-text">
                         <label>Name: </label>
                         <input id="name" />
                     </div>
                     <br></br>
-                    <div className="piggy-bank-form">
+                    <div className="piggy-bank-form-text">
                         <label >Gender: </label>
                         <input id="gender" />
                     </div>

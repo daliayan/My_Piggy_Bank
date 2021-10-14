@@ -3,22 +3,14 @@
   background-color: rgb(251, 158, 203);
   /* justify-content:center;
   align-items: center; */
-  cursor: pointer;
-  /* text-align: center; */
+  cursor: pointer; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-line{
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.nav-bar{
+.nav-bar {
   text-align: center;
   overflow: hidden;
   background-color: rgb(250, 222, 233);
@@ -28,9 +20,7 @@
 
 .nav-bar a{
   text-align: center;
-  float: center;
   color: #3a0124;
-  text-align: center;
   text-decoration: none;
   font-size: 17px;
   margin: 5px;
@@ -41,21 +31,31 @@
   height: 200px;
   /* text-align: center; */
   display: inline-block;
-  border-radius: 10%;
+  border-radius: 1%;
   border-style: hidden;
   margin: 10px;
   padding: 10px;
   background: url(images/pink.jpg) no-repeat left center fixed; 
-  align-items: center;
+  /* float: right; */
+  /* align-items: center; */
+  /* background-position-y: bottom; */
 }
 
 .piggy-bank-form{
   display: inline-block;
-  border-radius: 10%;
+  border-radius: 1%;
   border-style: hidden;
   margin: 10px;
   padding: 10px;
   background: url(images/pink.jpg) no-repeat left center fixed; 
+  text-align: center;
+  /* inset-block-start: left; */
+}
+
+.piggy-bank-form-text{
+  /* margin: 1px;
+  padding: 1px; */
+  padding: 6px 10px;
 }
 
 .form-button{
@@ -75,29 +75,10 @@
   padding: 10px;
 }
 
-
 .img{
   max-width: 400px;
   margin: auto;
 }
-
-/* background: url("./images/soft-pink.jpeg") no-repeat center
-    center fixed; */
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(17, 9, 9);
-} */
-
-/* .App-link {
-  color: #61dafb;
-} */
 
 @keyframes App-logo-spin {
   from {

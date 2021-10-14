@@ -1,6 +1,7 @@
 import {Component} from 'react';
 import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
+import  Header from './components/Header';
 import  NavBar from './components/NavBar';
 import {fetchBanks} from './actions/fetchBanks';
 import {connect} from "react-redux";
@@ -27,6 +28,9 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
+          <div>
+          <Header />
+            </div>
           <div>
             <NavBar />
           </div>

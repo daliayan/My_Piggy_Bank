@@ -7,9 +7,7 @@ class BankFormContainer extends Component {
     render(){
         return (
         <div id="bank-container">
-            <h3>
-              <BankForm />
-            </h3>
+            <BankForm />
         </div>
         )
     }
