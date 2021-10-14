@@ -5,7 +5,7 @@ export const fetchBanks= () => {
         return (
         fetch('http://localhost:3000/banks') 
         .then(resp => resp.json())
-        .then(banks => console.log(banks))
+        // .then(banks => console.log(banks))
             // ({type: 'ADD_BANKS', banks: banks}))
             //.then(banks => dispatch({type: 'ADD_BANKS', banks: banks}))
         );

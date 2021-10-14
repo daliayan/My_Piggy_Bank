@@ -18,7 +18,7 @@ class BankContainer extends Component {
     }
 
     render(){
-        console.log(this.state)
+        // console.log(this.state)
         return (
         <div id="bank-container" className="bank-container">
             <BankList />
