@@ -1,8 +1,10 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   background-color: rgb(251, 158, 203);
-  justify-content:center;
-  align-items: center;
+  /* justify-content:center;
+  align-items: center; */
+  cursor: pointer;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -17,6 +19,7 @@
 }
 
 .nav-bar{
+  text-align: center;
   overflow: hidden;
   background-color: rgb(250, 222, 233);
   padding: 5px; 
@@ -24,6 +27,7 @@
 }
 
 .nav-bar a{
+  text-align: center;
   float: center;
   color: #3a0124;
   text-align: center;
@@ -33,29 +37,40 @@
 }
 
 .bank-container{
-  /* align-self: center; */
+  width: 200px;
+  height: 200px;
+  /* text-align: center; */
   display: inline-block;
   border-radius: 10%;
-  border-style: solid;
+  border-style: hidden;
   margin: 10px;
   padding: 10px;
-  background: url(images/pink.jpg) no-repeat center center fixed; 
+  background: url(images/pink.jpg) no-repeat left center fixed; 
+  align-items: center;
 }
 
 .piggy-bank-form{
-  /* align-self: center; */
   display: inline-block;
   border-radius: 10%;
-  border-style: solid;
+  border-style: hidden;
   margin: 10px;
   padding: 10px;
-  background: url(images/pink.jpg) no-repeat center center fixed; 
+  background: url(images/pink.jpg) no-repeat left center fixed; 
+}
+
+.form-button{
+  background-color: rgb(121, 8, 64);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: dashed;
+  margin: 10px;
 }
 
 .fund-container{
   display: inline-block;
   border-radius: 10%;
-  border-style: solid;
+  border-style: hidden;
   margin: 10px;
   padding: 10px;
 }

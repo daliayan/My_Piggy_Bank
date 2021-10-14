@@ -4,11 +4,7 @@ import React, { Component } from 'react';
 
 class BankList extends Component {
     // listBanks = () => {
-        // return this.props.banks.map((bank) => <div> {bank.name}</div>)
-    // }
-
-    //  listBanks = () => {
-    //         console.log(this.fetchBanks())
+    //     return this.props.banks.map((bank) => <div> {bank.name}</div>)
     // }
 
     state = {
@@ -19,7 +15,7 @@ class BankList extends Component {
         // const {name, gender} = this.props
 
         return (
-            <div className='bank-list'>
+            <div>
                 <h3>
                     {/* {this.listBanks()} */}
                     LIST OF BANK DATA BACKEND

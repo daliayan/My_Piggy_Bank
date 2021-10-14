@@ -7,6 +7,7 @@ const FundCard =props => {
         <div id="dollar-bills">
             
                 <p id="one-bill"> $1
+                <img></img>
                 </p>
 
                 <p id="five-bill"> $5
