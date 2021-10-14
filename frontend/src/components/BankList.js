@@ -1,38 +1,36 @@
 import React, { Component } from 'react';
-// import {fetchBanks} from './actions/fetchBanks';
 //fetching banks from backend
 
 class BankList extends Component {
-    // listBanks = () => {
-    //     return this.state.banks.map((bank) => <div> {bank.name}</div>)
-    // }
+
+    componentDidMount(){
+        fetch('http://localhost:3000/banks') 
+        .then(resp => resp.json())
+        .then(banks => this.setState({bankData: banks} ))
+        // console.log("My data is connected");
+    }
 
     state = {
-        banks: []
+        bankData: []
+    }
+
+    listBanks = () => {
+        return this.state.bankData.map((bank) => <div> {bank.name}</div>)
     }
 
     render(){
-        // const {name, gender} = this.props
 
         return (
             <div>
                 <h3>
-                    {/* {this.listBanks()} */}
                     LIST OF BANK DATA BACKEND
-                    {/* {this.props.name}
-                    {this.props.gender} */}
                 </h3>
+                <p>
+                    {this.listBanks()}
+                </p>
             </div>
         )
     }
 }
-
-// function BankListItems(props){
-//     const listedBanks =  props.banks.map((bank) => <div> {bank.name}</div>);
-// }
-
-// function BankListItems(props){
-    //     const listedBanks =  props.banks.map((bank) => <div> {bank.name}</div>);
-    // }
 
 export default BankList;
