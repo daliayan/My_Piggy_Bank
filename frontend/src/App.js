@@ -52,11 +52,14 @@ const mapStateToProps = (state) => {
     loading: state.loading
   }
 }
+// connect to global state to pass part of the state to the component as a prop
+
 
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchBanks: () => dispatch(fetchBanks())
   }
 }
+//to update+change the global state
 
 export default (connect(mapStateToProps, mapDispatchToProps)(App));
