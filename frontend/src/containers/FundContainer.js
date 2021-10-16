@@ -3,7 +3,7 @@ import React from 'react';
 import FundCard from '../components/FundCard';
 
 
-const FundContainter = (props) => {
+const FundContainter = () => {
         return (
             <div id="fund-container" className="fund-container"> 
                 <FundCard /> 

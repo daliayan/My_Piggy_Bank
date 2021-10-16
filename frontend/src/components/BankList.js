@@ -15,19 +15,17 @@ class BankList extends Component {
     }
 
     listBanks = () => {
-        return this.state.bankData.map((bank) => <div> {bank.name}</div>)
+        return this.state.bankData.map((bank) => <div>{bank.name} - {bank.gender} - ${bank.fund} </div>)
     }
 
     render(){
 
         return (
             <div>
-                <h3>
+                <h2>
                     LIST OF BANK DATA BACKEND
-                </h3>
-                <p>
-                    {this.listBanks()}
-                </p>
+                </h2>
+                {this.listBanks()}
             </div>
         )
     }

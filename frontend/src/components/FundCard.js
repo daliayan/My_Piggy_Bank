@@ -1,10 +1,12 @@
 import React from 'react';
+import piggy from '../images/piggy.jpg';
 // assiging the $$ their values
 
 const FundCard =props => {
 
         return (
         <div id="dollar-bills">
+                <img src={piggy} className='piggy-img'></img>
             
                 <p id="one-bill"> $1
                 {/* <img></img> */}
