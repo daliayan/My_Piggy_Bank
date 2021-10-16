@@ -1,19 +1,17 @@
 .App {
-  /* text-align: center; */
-  background-color: rgb(251, 158, 203);
-  /* justify-content:center;
-  align-items: center; */
+  background-color: rgb(236, 185, 210);
   cursor: pointer; 
 }
 
 .header-line{
   text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .nav-bar {
   text-align: center;
   overflow: hidden;
-  background-color: rgb(250, 222, 233);
+  background-color: rgb(251, 142, 186);
   padding: 5px; 
   width: 100%;
 }
@@ -24,54 +22,43 @@
   text-decoration: none;
   font-size: 17px;
   margin: 5px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .bank-container{
-  width: 100%;
   text-align: center;
-  /* text-align: center; */
-  /* display: inline-block; */
-  border-radius: 1%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border-style: hidden;
-  margin: 10px;
   padding: 10px;
   background: url(images/pink.jpg) center; 
-  /* float: right; */
-  /* background-position-y: bottom; */
 }
 
 .bank-list-data{
   text-align: center;
   font-size: 18px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .piggy-bank-form{
   display: inline-block;
-  border-radius: 1%;
-  border-style: hidden;
-  margin: 10px;
   padding: 10px;
-  background: url(images/pink.jpg)  center; 
+  background-color: rgb(180, 147, 164);
   text-align: center;
   width: 100%;
-  /* inset-block-start: left; */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .piggy-bank-form-text{
   padding: 5px 5px;
   font-size: 16px;
   text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .piggy-img{
   display: block;
-  /* max-width: 100%; */
-  /* height: auto; */
   margin-left: auto;
-  /* margin-right: auto; */
   width: 50%;
-  /* top: 50%; */
-  /* left: 50%; */
 }
 
 .form-button{
@@ -79,10 +66,8 @@
   color: white;
   font-size: 16px;
   padding: 12px 24px;
-  /* border: dashed; */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 10px;
-  /* text-align: center;
-  width: 20%; */
 }
 
 .fund-container{
@@ -91,6 +76,7 @@
   border-style: hidden;
   margin: 10px;
   padding: 10px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 @keyframes App-logo-spin {

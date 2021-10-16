@@ -6,7 +6,7 @@ const FundCard =props => {
 
         return (
         <div id="dollar-bills">
-                <img src={piggy} className='piggy-img'></img>
+                <img src={piggy} className='piggy-img' alt=''></img>
             
                 <p id="one-bill"> $1
                 {/* <img></img> */}
