@@ -35,7 +35,7 @@ export default class BankForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <h1 className="piggy-bank-form">Make Your Own Piggy Bank 🐷💰</h1>
+                    <h2 className="piggy-bank-form">Make Your Own Piggy Bank 🐷💰</h2>
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label>Name: </label>

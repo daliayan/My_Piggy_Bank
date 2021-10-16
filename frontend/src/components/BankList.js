@@ -22,9 +22,9 @@ class BankList extends Component {
 
         return (
             <div>
-                <h2>
+                <h3>
                     LIST OF BANK DATA BACKEND
-                </h2>
+                </h3>
                 {this.listBanks()}
             </div>
         )

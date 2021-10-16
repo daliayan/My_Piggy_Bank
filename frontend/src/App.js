@@ -29,16 +29,10 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-          <Header />
-            </div>
-          <div>
+            <Header />
             <NavBar />
-          </div>
-          <div>
             <BankContainer />
-          </div>
-          <div>
-          <BankFormContainer />
+            <BankFormContainer />
           </div>
         </Router>
       </div>

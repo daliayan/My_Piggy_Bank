@@ -1,5 +1,5 @@
 .App {
-  background-color: rgb(255, 154, 203);
+  background-color: rgb(251, 202, 226);
   cursor: pointer; 
 }
 
@@ -10,9 +10,8 @@
 
 .nav-bar {
   text-align: center;
-  overflow: hidden;
-  background-color: rgb(243, 45, 124);
-  padding: 5px; 
+  background-color: rgb(255, 111, 168);
+  padding: 3px; 
   width: 100%;
 }
 
@@ -20,7 +19,7 @@
   text-align: center;
   color: #000000;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
   margin: 5px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -28,9 +27,9 @@
 .bank-container{
   text-align: center;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border-style: hidden;
-  padding: 10px;
-  background-color: rgb(255, 154, 203)
+  /* border-style: hidden; */
+  padding: 3px;
+  background-color: rgb(251, 202, 226);
   /* background: url(images/pink.jpg) center;  */
 }
 
@@ -43,7 +42,7 @@
 .piggy-bank-form{
   display: inline-block;
   padding: 10px;
-  background-color: rgb(243, 45, 124);
+  background-color: rgb(255, 111, 168);
   text-align: center;
   width: 100%;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
