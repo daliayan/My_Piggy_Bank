@@ -1,11 +1,12 @@
 import React from 'react';
+// import {connect} from "react-redux";
 import piggy from '../images/piggy.jpg';
 // assiging the $$ their values
 
-const FundCard =props => {
+const FundCard = props => {
 
         return (
-        <div id="dollar-bills">
+        <div>
                 <img src={piggy} className='piggy-img' alt=''></img>
             
                 <p id="one-bill"> $1
