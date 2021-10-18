@@ -7,14 +7,13 @@ class BankList extends Component {
         fetch('http://localhost:3000/banks') 
         .then(resp => resp.json())
         .then(banks => this.setState({bankData: banks} ))
-        // console.log("My data is connected");
     }
 
     state = {
         bankData: []
     }
 
-    listBanks = () => {
+    listBanks(){
         return this.state.bankData.map((bank) => <div>{bank.name} - {bank.gender} - ${bank.fund} </div>)
     }
 

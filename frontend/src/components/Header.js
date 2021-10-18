@@ -2,8 +2,10 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header>
-      <h1 className="header-line">Make Your Piggy Bank</h1>
+    <header className="header-line">
+      <h3>
+      Make Your Piggy Bank
+      </h3>
     </header>
   );
 }

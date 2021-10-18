@@ -21,12 +21,14 @@ export default class BankForm extends Component {
         })
     }
 
-    handleSubmit = (event) =>{
+    handleSubmit(event) {
         event.preventDefault();
-        // console.log(this.state.term)
+        
         const submittedData = this.state.createBankData;
-        submittedData.push(this.state.value);
+        submittedData.push(this.props.value);
         this.setState({bankData: submittedData});
+
+        // console.log(this.state.term)
         // console.log(event.target.elements.name.value)
         // console.log(event.target.elements.gender.value)
 
@@ -34,16 +36,17 @@ export default class BankForm extends Component {
             method: 'POST',
             body:submittedData,
         });
+        // debugger
     }
 
-    handleClick =() =>{
+    handleClick(){
         console.log('clicked.....')
     }
 
 
     render(){
         // console.log(this.setState);
-        var handleUpdate = this.props.fetchNewData;
+        var handleDataUpdate = this.props.fetchNewData;
         return (
             <div>
                 <form onSubmit={this.handleSubmit} >
@@ -52,8 +55,7 @@ export default class BankForm extends Component {
                     <div className="piggy-bank-form-text">
                         <label>Name: </label>
                         <input id="name" type="text" value={this.props.value} onChange={this.handleChange}/>
-                        {/* required */}
-                        {/* onClick={this.handleClick()} */} 
+                        {/* required */} 
                     </div>
                     <br></br>
                     <div className="piggy-bank-form-text">
@@ -71,17 +73,13 @@ export default class BankForm extends Component {
                         <button className="form-button" onClick={this.handleClick()}>
                             Create Piggy Bank
                         </button>
+                        {/* onClick={this.handleClick()} */}
                     </div>
                 </form>
             </div>
         )
     }
 }
-
-// const onItemClick = useCallback(event => {
-//     console.log('clicked', event.target);
-//     }, [data]
-// )
 
 // var dataSubmission = useCallback(event => {
 //     console.log('clicked', event.target);
