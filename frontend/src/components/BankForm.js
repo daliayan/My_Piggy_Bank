@@ -1,15 +1,12 @@
-// Form to create new bank
-
-import React, { Component } from 'react'
-import FundContainter from '../containers/FundContainer';
+import React, { Component } from 'react';
+// import FundContainter from '../containers/FundContainer';
 
 export default class BankForm extends Component {
 
     constructor(props){
         super(props);
-        this.state= {
+        this.state = {
             createBankData: [],
-            value: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -17,29 +14,46 @@ export default class BankForm extends Component {
     }
 
     handleChange(event){
-        this.setState({value: event.target.value})
+        this.setState({
+            name: event.target.value,
+            gender: event.target.value,
+            fund: event.target.value
+        })
     }
 
     handleSubmit = (event) =>{
         event.preventDefault();
-        console.log(event.target.value)
-        var submittedData = this.state.createBankData;
+        // console.log(this.state.term)
+        const submittedData = this.state.createBankData;
         submittedData.push(this.state.value);
         this.setState({bankData: submittedData});
         // console.log(event.target.elements.name.value)
         // console.log(event.target.elements.gender.value)
+
+        fetch('http://localhost:3000/banks', {
+            method: 'POST',
+            body:submittedData,
+        });
+    }
+
+    handleClick =() =>{
+        console.log('clicked.....')
     }
 
 
     render(){
+        // console.log(this.setState);
+        var handleUpdate = this.props.fetchNewData;
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} >
                     <h2 className="piggy-bank-form">Make Your Own Piggy Bank 🐷💰</h2>
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label>Name: </label>
-                        <input id="name" type="text" value={this.state.value} onChange={this.handleChange} required/>
+                        <input id="name" type="text" value={this.props.value} onChange={this.handleChange}/>
+                        {/* required */}
+                        {/* onClick={this.handleClick()} */} 
                     </div>
                     <br></br>
                     <div className="piggy-bank-form-text">
@@ -50,11 +64,11 @@ export default class BankForm extends Component {
                         </select>
                     </div>
                     <br></br>
-                    <div>
+                    {/* <div>
                         <FundContainter />
-                    </div>
+                    </div> */}
                     <div>
-                        <button className="form-button">
+                        <button className="form-button" onClick={this.handleClick()}>
                             Create Piggy Bank
                         </button>
                     </div>
@@ -63,3 +77,19 @@ export default class BankForm extends Component {
         )
     }
 }
+
+// const onItemClick = useCallback(event => {
+//     console.log('clicked', event.target);
+//     }, [data]
+// )
+
+// var dataSubmission = useCallback(event => {
+//     console.log('clicked', event.target);
+//     }
+// )
+
+// const dataConnector = ({bankList, callback}) => {
+//     // return (
+
+//     // )
+// }
