@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import banksReducer from './reducer/banksReducer.js';
 //fetching banks from backend
 
 class BankList extends Component {
@@ -16,6 +17,13 @@ class BankList extends Component {
     listBanks(){
         return this.state.bankData.map((bank) => <div>{bank.name} - {bank.gender} - ${bank.fund} </div>)
     }
+
+    // handleRemoveBanks = bank => {
+    // banksReducer({
+    //     type: 'DELETE_BANKS',
+    //     payload: bank
+    //     });
+    // }
 
     formData = {
         name: this.name,
@@ -46,9 +54,17 @@ class BankList extends Component {
                 </h3>
                 {this.listBanks()}
                 {/* {this.props.banks ? this.listBanks() : "loading"} */}
+                {/* {this.state.bankData.map((bank) => <div>{bank.name} - {bank.gender} - ${bank.fund} </div>)} */}
             </div>
         )
     }
 }
 
 export default BankList;
+
+// const handleRemoveBanks = bank => {
+//     banksReducer({
+//         type: 'DELETE_BANKS',
+//         payload: bank
+//     });
+// }

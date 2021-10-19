@@ -1,14 +1,14 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 // stateless navbar that does not change
 
 function NavBar() {
   return (
       <div id="nav-bar" className="nav-bar">
-      <NavLink to="/banks"
-        >🐷Home🐷</NavLink>
-        <NavLink to="/banks/new">
-        🐷Create Piggy Bank🐷</NavLink>
+      <Link to="/banks"
+        >🐷Home🐷</Link>
+        <Link to="/banks/new">
+        🐷Create Piggy Bank🐷</Link>
   
       </div>
     )

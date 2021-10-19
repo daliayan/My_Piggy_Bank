@@ -56,4 +56,8 @@ const mapDispatchToProps = (dispatch) => {
 }
 //to update+change the global state
 
+// handleRemoveBanks = (dispatch) => {
+//   deleteBanks: () => dispatch('DELETE_BANKS')
+// }
+
 export default (connect(mapStateToProps, mapDispatchToProps)(App));

@@ -62,8 +62,7 @@ export default class BankForm extends Component {
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label>Name: </label>
-                        <input id="name" type="text" value={this.props.value} onChange={this.handleName}/>
-                        {/* required */} 
+                        <input id="name" type="text" value={this.props.value} onChange={this.handleName} required/>
                     </div>
                     <br></br>
                     <div className="piggy-bank-form-text">
@@ -88,14 +87,3 @@ export default class BankForm extends Component {
         )
     }
 }
-
-// var dataSubmission = useCallback(event => {
-//     console.log('clicked', event.target);
-//     }
-// )
-
-// const dataConnector = ({bankList, callback}) => {
-//     // return (
-
-//     // )
-// }

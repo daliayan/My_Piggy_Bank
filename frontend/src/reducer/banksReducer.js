@@ -13,13 +13,17 @@ const banksReducer = (state = {banks: [], loading: false}, action) => {
                 loading: false
         }
         case 'DELETE_BANKS':
-            return {
-                ...state,
-                banks: state.banks.filter((item, index) => index !== action.payload)
-            }
+            return  state.banks.filter(
+                index => action.payload.id !== index.id
+            );
         default:
             return state;
     }
 }
 
 export default banksReducer;
+
+// {
+//     ...state,
+//     banks: state.banks.filter((item, index) => index !== action.payload)
+// }
