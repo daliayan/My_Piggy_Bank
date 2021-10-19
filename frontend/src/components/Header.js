@@ -3,9 +3,9 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="header-line">
-      <h3>
+    <h3>
       Make Your Piggy Bank
-      </h3>
+    </h3>
     </header>
   );
 }

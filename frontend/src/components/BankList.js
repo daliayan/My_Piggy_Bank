@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import banksReducer from './reducer/banksReducer.js';
 //fetching banks from backend
 
 class BankList extends Component {
@@ -14,29 +13,15 @@ class BankList extends Component {
         bankData: []
     }
 
-    // listBanks(){
-    //     return this.state.bankData.map((bank) => <div>{bank.name} - {bank.gender} - ${bank.fund} </div>)
-    // } --
-    // deleteBank(){
-    //     this.state.deleteBank.then(
-    //         response => this.setState({banks: this.state.banks.filter(bank => bank.id !== id)}))
-    // } --
-    // handleDelete(){
-    //     this.props.
-    // }
-
     deleteBank(bank){
         return this.state.bankData.filter(index => index.id !== bank.id)
         // this.setState({data})
         // this.deleteBank = this.deleteBank.bind(this)
     }
 
-    // handleRemoveBanks = bank => {
-    // banksReducer({
-    //     type: 'DELETE_BANKS',
-    //     payload: bank
-    //     });
-    // }
+    handleClick(){
+        this.console.log('clicked.....')
+    }
 
     formData = {
         name: this.name,
@@ -65,12 +50,18 @@ class BankList extends Component {
                 <h3>
                     LIST OF BANK DATA BACKEND
                 </h3>
-                {/* {this.listBanks()} */}
-                
-                {/* {this.props.banks ? this.listBanks() : "loading"} */}
-                {this.state.bankData.map((bank) => <div>
-                    {bank.name} - {bank.gender} - ${bank.fund} --
-                    <button onClick={() => this.deleteBank(bank.id)} className="delete-button">DELETE</button>
+
+                {this.state.bankData.map((bank) => <div className="bank-list-data">
+                <p>
+                 {bank.name} - {bank.gender} - ${bank.fund}
+                    <button onClick={() => this.deleteBank(bank)}  key={bank} className="delete-button" >
+                        DELETE
+                    </button>
+                </p>
+                    {/* {this.listBanks()} */}
+                    {/* {this.props.banks ? this.listBanks() : "loading"} */}
+                    {/* {() => this.deleteBank(bank.id)} className="delete-button" */}
+                    {/* onClick={this.handleClick()} */}
                 </div>)}
             </div>
         )
@@ -84,4 +75,17 @@ export default BankList;
 //         type: 'DELETE_BANKS',
 //         payload: bank
 //     });
+// }
+
+// listBanks(){
+//     return this.state.bankData.map((bank) => <div>{bank.name} - {bank.gender} - ${bank.fund} </div>)
+// } --
+
+// deleteBank(){
+//     this.state.deleteBank.then(
+//         response => this.setState({banks: this.state.banks.filter(bank => bank.id !== id)}))
+// } --
+
+// handleDelete(){
+//     this.props.
 // }

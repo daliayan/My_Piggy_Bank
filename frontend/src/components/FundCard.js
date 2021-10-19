@@ -22,7 +22,8 @@ const FundCard = (props) => {
                 <img src={piggy} className='piggy-img' alt=''></img>
 
            <div className="dollars">
-                   <div className='row'>
+                   <div>
+                   {/* className='row' */}
                         <p id="one-bill"> $1
                                 <img src={one} alt=''></img>
                         </p>

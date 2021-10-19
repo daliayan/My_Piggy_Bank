@@ -5,11 +5,14 @@ import {Link} from 'react-router-dom';
 function NavBar() {
   return (
       <div id="nav-bar" className="nav-bar">
+        
       <Link to="/banks"
-        >🐷Home🐷</Link>
-        <Link to="/banks/new">
-        🐷Create Piggy Bank🐷</Link>
-  
+        >🐷Home🐷
+      </Link>
+      <Link to="/banks/new">
+        🐷Create Piggy Bank🐷
+      </Link>
+
       </div>
     )
 }
