@@ -10,12 +10,16 @@ const banksReducer = (state = {banks: [], loading: false}, action) => {
             return {
                 ...state,
                 banks: action.banks,
-                loading: false
         }
         case 'DELETE_BANKS':
-            return  state.banks.filter(
+            const deletingBank = state.banks.filter(
                 index => action.payload.id !== index.id
             );
+            return deletingBank()
+            // const deletingBank = state.banks.splice(index, 1)
+            // return  state.banks.filter(
+            //     index => action.payload.id !== index.id
+            // );
         default:
             return state;
     }
