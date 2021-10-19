@@ -12,7 +12,7 @@ class BanksController < ApplicationController
     end
 
     def create
-        bank = Bank.create(bank_params)
+        bank = Bank.new(bank_params)
         if bank.save
             render json: bank
         else
@@ -45,6 +45,6 @@ class BanksController < ApplicationController
     end
 
     def bank_params
-        params.permit(:name, :amount, :gender) #might need :amount here but not to create bank????
+        params.require(:bank).permit(:name, :gender, :amount) #might need :amount here but not to create bank????
     end
 end

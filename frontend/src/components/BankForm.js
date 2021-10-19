@@ -6,42 +6,50 @@ export default class BankForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-            createBankData: [],
+            name: '',
+            gender: '',
+            fund: null
         };
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleName = this.handleName.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleName(event){
+        this.setState({
+            name: event.target.value
+        })
     }
 
     handleChange(event){
         this.setState({
-            name: event.target.value,
             gender: event.target.value,
-            fund: event.target.value
+            // fund: event.target.value
         })
     }
 
     handleSubmit(event) {
         event.preventDefault();
         
-        const submittedData = this.state.createBankData;
-        submittedData.push(this.props.value);
+        const submittedData = this.state;
+        // submittedData.push(this.props.value);
         this.setState({bankData: submittedData});
-
-        // console.log(this.state.term)
-        // console.log(event.target.elements.name.value)
-        // console.log(event.target.elements.gender.value)
 
         fetch('http://localhost:3000/banks', {
             method: 'POST',
-            body:submittedData,
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(submittedData),
         });
-        // debugger
+        window.location.replace('http://localhost:3001')
     }
 
-    handleClick(){
-        console.log('clicked.....')
-    }
+    // handleClick(){
+    //     console.log('clicked.....')
+    // }
 
 
     render(){
@@ -54,13 +62,13 @@ export default class BankForm extends Component {
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label>Name: </label>
-                        <input id="name" type="text" value={this.props.value} onChange={this.handleChange}/>
+                        <input id="name" type="text" value={this.props.value} onChange={this.handleName}/>
                         {/* required */} 
                     </div>
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label >Gender: </label>
-                        <select>
+                        <select id="gender" value={this.props.value} onChange={this.handleChange}>
                             <option>Girl</option>
                             <option>Boy</option>
                         </select>
@@ -70,7 +78,7 @@ export default class BankForm extends Component {
                         <FundContainter />
                     </div> */}
                     <div>
-                        <button className="form-button" onClick={this.handleClick()}>
+                        <button className="form-button">
                             Create Piggy Bank
                         </button>
                         {/* onClick={this.handleClick()} */}

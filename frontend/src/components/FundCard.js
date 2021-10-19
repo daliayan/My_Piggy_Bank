@@ -14,6 +14,7 @@ const FundCard = (props) => {
 
         // handleClick() {
         //       props(console.log('clicked'));
+        //onClick={this.handleClick()}
         // }
 
         return (
@@ -23,27 +24,27 @@ const FundCard = (props) => {
            <div className="dollars">
                    <div className='row'>
                         <p id="one-bill"> $1
-                                <img src={one} alt='' onClick={this.handleClick()}></img>
+                                <img src={one} alt=''></img>
                         </p>
 
                         <p id="five-bill"> $5
-                        <img src={five} alt='' onClick={this.handleClick()}></img>
+                        <img src={five} alt=''></img>
                         </p>
                 
                         <p id="ten-bill"> $10
-                        <img src={ten} alt='' onClick={this.handleClick()}></img>
+                        <img src={ten} alt=''></img>
                         </p>
 
                         <p id="twenty-bill"> $20
-                        <img src={twenty} alt='' onClick={this.handleClick()}></img>
+                        <img src={twenty} alt='' ></img>
                         </p>
 
                         <p id="fifty-bill"> $50
-                        <img src={fifty} alt='' onClick={this.handleClick()}></img>
+                        <img src={fifty} alt='' ></img>
                         </p>
 
                         <p id="hundred-bill"> $100
-                        <img src={hundred} alt='' onClick={this.handleClick()}></img> 
+                        <img src={hundred} alt='' ></img> 
                         {/* {props.value} */}
                         </p>
                      </div>

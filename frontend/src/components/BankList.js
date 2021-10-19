@@ -39,13 +39,13 @@ class BankList extends Component {
     }
 
     render(){
-
         return (
             <div>
                 <h3>
                     LIST OF BANK DATA BACKEND
                 </h3>
                 {this.listBanks()}
+                {/* {this.props.banks ? this.listBanks() : "loading"} */}
             </div>
         )
     }
