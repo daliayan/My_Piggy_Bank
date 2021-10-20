@@ -14,14 +14,17 @@ class BankList extends Component {
     }
 
     deleteBank(bank){
-        return this.state.bankData.filter(index => index.id !== bank.id)
+        // console.log(bank);
+        const byePiggy = this.setState({bankData: byePiggy});
+        // this.setState({bankData: byePiggy});
+        return this.state.bankData.filter(index => index !== bank)
         // this.setState({data})
         // this.deleteBank = this.deleteBank.bind(this)
     }
 
-    handleClick(){
-        this.console.log('clicked.....')
-    }
+    // handleClick(bank){
+    //     console.log(this.deleteBank)
+    // }
 
     formData = {
         name: this.name,
@@ -45,6 +48,7 @@ class BankList extends Component {
     }
 
     render(){
+        // var deletingPig = this.props.deleteBank;
         return (
             <div>
                 <h3>
@@ -54,7 +58,7 @@ class BankList extends Component {
                 {this.state.bankData.map((bank) => <div className="bank-list-data">
                 <p>
                  {bank.name} - {bank.gender} - ${bank.fund}
-                    <button onClick={() => this.deleteBank(bank)}  key={bank} className="delete-button" >
+                    <button onClick={() => {this.deleteBank(bank)}}  key={bank} className="delete-button" >
                         DELETE
                     </button>
                 </p>
