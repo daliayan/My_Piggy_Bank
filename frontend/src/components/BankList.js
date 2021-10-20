@@ -13,18 +13,9 @@ class BankList extends Component {
     }
 
     deleteBank(bank){
-        // console.log(bank);
         const byePiggy = this.state.bankData.filter(index => index !== bank)
-        // const byePiggy = this.setState({bankData: byePiggy});
         this.setState({bankData: byePiggy});
-        // return this.state.bankData.filter(index => index !== bank)
-        // this.setState({data})
-        // this.deleteBank = this.deleteBank.bind(this)
     }
-
-    // handleClick(bank){
-    //     console.log(this.deleteBank)
-    // }
 
     formData = {
         name: this.name,
@@ -48,8 +39,6 @@ class BankList extends Component {
     }
 
     render(){
-        // var deletingPig = this.props.deleteBank;
-        // console.log(this.setState);
         return (
             <div>
                 <h3>
@@ -63,10 +52,6 @@ class BankList extends Component {
                         DELETE
                     </button>
                 </p>
-                    {/* {this.listBanks()} */}
-                    {/* {this.props.banks ? this.listBanks() : "loading"} */}
-                    {/* {() => this.deleteBank(bank.id)} className="delete-button" */}
-                    {/* onClick={this.handleClick()} */}
                 </div>)}
             </div>
         )
@@ -74,23 +59,3 @@ class BankList extends Component {
 }
 
 export default BankList;
-
-// const handleRemoveBanks = bank => {
-//     banksReducer({
-//         type: 'DELETE_BANKS',
-//         payload: bank
-//     });
-// }
-
-// listBanks(){
-//     return this.state.bankData.map((bank) => <div>{bank.name} - {bank.gender} - ${bank.fund} </div>)
-// } --
-
-// deleteBank(){
-//     this.state.deleteBank.then(
-//         response => this.setState({banks: this.state.banks.filter(bank => bank.id !== id)}))
-// } --
-
-// handleDelete(){
-//     this.props.
-// }
