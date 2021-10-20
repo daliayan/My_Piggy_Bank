@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FundContainter from '../containers/FundContainer';
+// import FundContainter from '../containers/FundContainer';
 
 export default class BankForm extends Component {
 
@@ -73,9 +73,9 @@ export default class BankForm extends Component {
                         </select>
                     </div>
                     <br></br>
-                    <div>
+                    {/* <div>
                         <FundContainter />
-                    </div>
+                    </div> */}
                     <div>
                         <button className="form-button">
                             Create Piggy Bank

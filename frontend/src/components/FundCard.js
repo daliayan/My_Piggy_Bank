@@ -10,7 +10,7 @@ import hundred from '../images/money/hundred.jpg';
 // assiging the $$ their values
 
 const FundCard = (props) => {
-        console.log(props);
+        // console.log(props);
 
         // handleClick() {
         //       props(console.log('clicked'));
@@ -21,31 +21,31 @@ const FundCard = (props) => {
         <div>
                 <img src={piggy} className='piggy-img' alt=''></img>
 
-           <div className="dollars">
+           <div class="dollars-container">
                    <div>
                    {/* className='row' */}
-                        <p id="one-bill"> $1
+                        <p id="one-bill" class="photo"> $1
                                 <img src={one} alt=''></img>
                         </p>
 
                         <p id="five-bill"> $5
-                        <img src={five} alt=''></img>
+                        <img src={five} alt='' class="photo"></img>
                         </p>
                 
                         <p id="ten-bill"> $10
-                        <img src={ten} alt=''></img>
+                        <img src={ten} alt='' class="photo"></img>
                         </p>
 
                         <p id="twenty-bill"> $20
-                        <img src={twenty} alt='' ></img>
+                        <img src={twenty} alt='' class="photo"></img>
                         </p>
 
                         <p id="fifty-bill"> $50
-                        <img src={fifty} alt='' ></img>
+                        <img src={fifty} alt='' class="photo"></img>
                         </p>
 
                         <p id="hundred-bill"> $100
-                        <img src={hundred} alt='' ></img> 
+                        <img src={hundred} alt='' class="photo"></img> 
                         {/* {props.value} */}
                         </p>
                      </div>
