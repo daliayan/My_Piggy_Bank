@@ -12,10 +12,36 @@ class BankList extends Component {
         bankData: []
     }
 
+    // deleteBank(bank){
+    //     const byePiggy = this.state.bankData.filter(index => index !== bank)
+    //     this.setState({bankData: byePiggy});
+    // }
+
     deleteBank(bank){
         const byePiggy = this.state.bankData.filter(index => index !== bank)
-        this.setState({bankData: byePiggy});
-    }
+        // this.setState({bankData: byePiggy});
+
+        fetch(`http://localhost:3000/banks/${bank.id}`)
+        .then(resp => resp.json())
+        .then(bankData => this.setState({bankData: byePiggy}))
+
+        // const config = {
+        //     method: 'DELETE',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Accept': 'application/json'
+        //     }
+        // }
+
+        // const byePiggy = this.state.bankData.filter(index => index !== bank)
+
+        // fetch(`http://localhost:3000/banks/${id}`, config)
+        // .then(resp => resp.json())
+        // .then(bankData => this.setState({bankData: byePiggy}))
+
+        // const byePiggy = this.state.bankData.filter(index => index !== bank)
+    };
+    
 
     formData = {
         name: this.name,

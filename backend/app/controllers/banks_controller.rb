@@ -34,6 +34,7 @@ class BanksController < ApplicationController
     end
 
     def destroy
+        # @bank = Bank.find_by(params[:id])
         @bank.destroy
         render json: {message: "You've successfully deleted #{@bank.name} Piggy Bank"}
     end
@@ -41,7 +42,7 @@ class BanksController < ApplicationController
     private
 
     def made_bank
-        @bank = Bank.find(params[:id])
+        @bank = Bank.find_by_id(params[:id])
     end
 
     def bank_params

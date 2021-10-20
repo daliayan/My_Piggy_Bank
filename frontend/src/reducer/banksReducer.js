@@ -26,8 +26,3 @@ const banksReducer = (state = {banks: [], loading: false}, action) => {
 }
 
 export default banksReducer;
-
-// {
-//     ...state,
-//     banks: state.banks.filter((item, index) => index !== action.payload)
-// }
