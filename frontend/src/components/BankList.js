@@ -42,7 +42,7 @@ class BankList extends Component {
         return (
             <div>
                 <h3>
-                    LIST OF BANK DATA BACKEND
+                    ALL PIGGY BANKS
                 </h3>
 
                 {this.state.bankData.map((bank) => <div className="bank-list-data">
