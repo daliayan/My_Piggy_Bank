@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//fetching banks from backend
 
 class BankList extends Component {
 
@@ -15,9 +14,10 @@ class BankList extends Component {
 
     deleteBank(bank){
         // console.log(bank);
-        const byePiggy = this.setState({bankData: byePiggy});
-        // this.setState({bankData: byePiggy});
-        return this.state.bankData.filter(index => index !== bank)
+        const byePiggy = this.state.bankData.filter(index => index !== bank)
+        // const byePiggy = this.setState({bankData: byePiggy});
+        this.setState({bankData: byePiggy});
+        // return this.state.bankData.filter(index => index !== bank)
         // this.setState({data})
         // this.deleteBank = this.deleteBank.bind(this)
     }
@@ -49,6 +49,7 @@ class BankList extends Component {
 
     render(){
         // var deletingPig = this.props.deleteBank;
+        // console.log(this.setState);
         return (
             <div>
                 <h3>

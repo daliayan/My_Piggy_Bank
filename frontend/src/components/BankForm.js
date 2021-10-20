@@ -53,7 +53,6 @@ export default class BankForm extends Component {
 
 
     render(){
-        // console.log(this.setState);
         var handleDataUpdate = this.props.fetchNewData;
         return (
             <div>
