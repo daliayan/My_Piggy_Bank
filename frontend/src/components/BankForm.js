@@ -32,7 +32,7 @@ export default class BankForm extends Component {
 
     // handleFunds(event){
     //     this.setState({
-    //         fund: event.target.value,
+    //         fund: Number(event.target.value),
     //     })
     // }
 
@@ -67,7 +67,7 @@ export default class BankForm extends Component {
                         <input id="name" type="text" value={this.props.value} onChange={this.handleName} required/>
                     </div>
                     <br></br>
-                    <div className="piggy-bank-form-text">
+                    <div className="piggy-bank-form-dropdown">
                         <label >Gender: </label>
                         <select id="gender" value={this.props.value} onChange={this.handleChange} >
                             <option>Girl</option>

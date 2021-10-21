@@ -53,6 +53,15 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.piggy-bank-form-dropdown{
+  /* display: inline-block; */
+  /* padding: 10px; */
+  /* background-color: rgb(255, 111, 168); */
+  text-align: center;
+  /* width: 100%; */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .piggy-bank-form-text{
   padding: 5px 5px;
   font-size: 16px;
