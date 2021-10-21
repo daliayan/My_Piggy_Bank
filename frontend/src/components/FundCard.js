@@ -30,13 +30,13 @@ export default class FundCard extends Component {
                 };
         }
 
-        handleEvent(event){
-                this.setState({
+        // handleEvent(event){
+        //         this.setState({
 
-                })
-        }
+        //         })
+        // }
 
-        handleClick(props){
+        handleClick(){
                 console.log('clicked.....')
         };
 
@@ -48,32 +48,32 @@ export default class FundCard extends Component {
                 <div>
                         <p id="one-bill" className="photo"> $1
                                 <img src={one} alt=''></img>
-                                <button class='btn-mon'></button>
+                                <button className='btn-mon' onClick={this.handleClick}></button>
                         </p>
 
                         <p id="five-bill" className="photo"> $5
                                 <img src={five} alt=''></img>
-                                <button class='btn-mon'></button>
+                                <button className='btn-mon' onClick={this.handleClick}></button>
                         </p>
                 
                         <p id="ten-bill" className="photo"> $10
                                 <img src={ten} alt=''></img>
-                                <button class='btn-mon'></button>
+                                <button className='btn-mon' onClick={this.handleClick}></button>
                         </p>
 
                         <p id="twenty-bill" className="photo"> $20
                                 <img src={twenty} alt=''></img>
-                                <button className='btn-mon'></button>
+                                <button className='btn-mon' onClick={this.handleClick}></button>
                         </p>
 
                         <p id="fifty-bill" className="photo"> $50
                                 <img src={fifty} alt='' ></img>
-                                <button class='btn-mon'></button>
+                                <button className='btn-mon' onClick={this.handleClick}></button>
                         </p>
 
                         <p id="hundred-bill" className="photo"> $100
                                 <img src={hundred} alt=''></img> 
-                                <button class='btn-mon'></button>
+                                <button className='btn-mon' onClick={this.handleClick}></button>
                         {/* {props.value} */}
                         </p>
                 </div> 

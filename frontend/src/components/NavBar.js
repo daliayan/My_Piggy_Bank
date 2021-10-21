@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link, Switch, Route} from 'react-router-dom';
-import About from '../components/About';
+import {Link} from 'react-router-dom';
+//, Switch, Route
+// import About from '../components/About';
 // stateless navbar that does not change
 
 function NavBar() {
@@ -13,7 +14,8 @@ function NavBar() {
       <Link to="/about">
         {/* 🐷About🐷 */}
         {/* <Route path="/about"> */}
-            {About}About 🐷
+            {/* {About} */}
+            About 🐷
             {/* </Route> */}
       </Link>
             {/* <div>
