@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import {connect} from "react-redux";
+
 import piggy from '../images/piggy.jpg';
 import one from '../images/money/one.jpg';
 import five from '../images/money/five.jpg';
@@ -11,24 +12,20 @@ import hundred from '../images/money/hundred.jpg';
 // assiging the $$ their values
 
 export default class FundCard extends Component {
-        // console.log(props);
 
-        // handleClick() {
-        //       props(console.log('clicked'));
-        //onClick={this.handleClick()}
+        
+
+        // constructor(props){
+        //         super(props);
+        //         this.state = {
+        //                 dollar: 5,
+        //                 five: 5,
+        //                 ten: 10,
+        //                 twenty: 20,
+        //                 fifty: 50,
+        //                 hundred: 100
+        //         };
         // }
-
-        constructor(props){
-                super(props);
-                this.state = {
-                        dollar: 5,
-                        five: 5,
-                        ten: 10,
-                        twenty: 20,
-                        fifty: 50,
-                        hundred: 100
-                };
-        }
 
         // handleEvent(event){
         //         this.setState({
@@ -80,3 +77,28 @@ export default class FundCard extends Component {
         </div>
         )}
 }
+
+
+
+// import {addOne, addFive, addTen, addTwenty, addFifty, addHundred} from '../actions/fetchFunds'
+// // import fundReducer from '../reducer/fundReducer.js';
+
+
+// const FundCard = (props) => {
+//         // console.log(props);
+
+
+//         // constructor(props){
+//         //         super(props);
+//         //         this.state = {
+//         //                 dollar: 5,
+//         //                 five: 5,
+//         //                 ten: 10,
+//         //                 twenty: 20,
+//         //                 fifty: 50,
+//         //                 hundred: 100
+//         //         };
+//         // }
+
+
+// export default FundCard;
