@@ -19,11 +19,6 @@ class BankList extends Component {
 
     deleteBank(bank){
         const byePiggy = this.state.bankData.filter(index => index !== bank)
-        // this.setState({bankData: byePiggy});
-
-        // fetch(`http://localhost:3000/banks/${bank.id}`)
-        // .then(resp => resp.json())
-        // .then(bankData => this.setState({bankData: byePiggy}))
 
         const config = {
             method: 'DELETE',
@@ -37,11 +32,6 @@ class BankList extends Component {
         .then(resp => resp.json())
         .then(bankData => this.setState({bankData: byePiggy}))
 
-        // const byePiggy = this.state.bankData.filter(index => index !== bank)
-
-        // fetch(`http://localhost:3000/banks/${id}`, config)
-        // .then(resp => resp.json())
-        // .then(bankData => this.setState({bankData: byePiggy}))
     };
     
 
