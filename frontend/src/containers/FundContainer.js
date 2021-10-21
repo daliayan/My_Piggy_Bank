@@ -4,6 +4,8 @@ import FundCard from '../components/FundCard';
 
 
 const FundContainter = () => {
+    // console.log(props);
+
         return (
             <div id="fund-container" className="fund-container"> 
                 <FundCard /> 

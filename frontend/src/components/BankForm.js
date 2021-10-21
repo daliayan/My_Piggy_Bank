@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import FundContainter from '../containers/FundContainer';
+import FundContainter from '../containers/FundContainer';
 
 export default class BankForm extends Component {
 
@@ -50,10 +50,10 @@ export default class BankForm extends Component {
     // handleClick(){
     //     console.log('clicked.....')
     // }
-
+    
+    // var handleDataUpdate = this.props.fetchNewData;
 
     render(){
-        var handleDataUpdate = this.props.fetchNewData;
         return (
             <div>
                 <form onSubmit={this.handleSubmit} >
@@ -66,15 +66,15 @@ export default class BankForm extends Component {
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label >Gender: </label>
-                        <select id="gender" value={this.props.value} onChange={this.handleChange}>
+                        <select id="gender" value={this.props.value} onChange={this.handleChange} >
                             <option>Girl</option>
                             <option>Boy</option>
                         </select>
                     </div>
                     <br></br>
-                    {/* <div>
+                    <div>
                         <FundContainter />
-                    </div> */}
+                    </div>
                     <div>
                         <button className="form-button">
                             Create Piggy Bank
