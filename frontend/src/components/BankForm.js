@@ -9,10 +9,12 @@ export default class BankForm extends Component {
             name: '',
             gender: '',
             fund: null
+            //fund: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleName = this.handleName.bind(this);
+        // this.handleFunds = this.handleFunds.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -25,9 +27,14 @@ export default class BankForm extends Component {
     handleChange(event){
         this.setState({
             gender: event.target.value,
-            // fund: event.target.value
         })
     }
+
+    // handleFunds(event){
+    //     this.setState({
+    //         fund: event.target.value,
+    //     })
+    // }
 
     handleSubmit(event) {
         event.preventDefault();
@@ -46,10 +53,6 @@ export default class BankForm extends Component {
         });
         window.location.replace('http://localhost:3001')
     }
-
-    // handleClick(){
-    //     console.log('clicked.....')
-    // }
     
     // var handleDataUpdate = this.props.fetchNewData;
 

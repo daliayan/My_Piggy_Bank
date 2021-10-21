@@ -13,8 +13,6 @@ import hundred from '../images/money/hundred.jpg';
 
 export default class FundCard extends Component {
 
-        
-
         // constructor(props){
         //         super(props);
         //         this.state = {
