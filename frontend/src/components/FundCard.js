@@ -38,7 +38,8 @@ export default class FundCard extends Component {
        render(){
         return (
         <div>
-                <img src={piggy} className='piggy-img' alt=''></img>
+                <img src={piggy} className='piggy-img' alt=''>
+                </img>
 
                 <div>
                         <p id="one-bill" className="photo"> $1
