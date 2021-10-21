@@ -45,34 +45,37 @@ export default class FundCard extends Component {
         <div>
                 <img src={piggy} className='piggy-img' alt=''></img>
 
-           <div className="dollars-container">
-                   <div>
-                   {/* className='row' */}
+                <div>
                         <p id="one-bill" className="photo"> $1
                                 <img src={one} alt=''></img>
+                                <button class='btn-mon'></button>
                         </p>
 
-                        <p id="five-bill"> $5
-                        <img src={five} alt='' className="photo"></img>
+                        <p id="five-bill" className="photo"> $5
+                                <img src={five} alt=''></img>
+                                <button class='btn-mon'></button>
                         </p>
                 
-                        <p id="ten-bill"> $10
-                        <img src={ten} alt='' className="photo"></img>
+                        <p id="ten-bill" className="photo"> $10
+                                <img src={ten} alt=''></img>
+                                <button class='btn-mon'></button>
                         </p>
 
-                        <p id="twenty-bill"> $20
-                        <img src={twenty} alt='' className="photo"></img>
+                        <p id="twenty-bill" className="photo"> $20
+                                <img src={twenty} alt=''></img>
+                                <button className='btn-mon'></button>
                         </p>
 
-                        <p id="fifty-bill"> $50
-                        <img src={fifty} alt='' className="photo"></img>
+                        <p id="fifty-bill" className="photo"> $50
+                                <img src={fifty} alt='' ></img>
+                                <button class='btn-mon'></button>
                         </p>
 
-                        <p id="hundred-bill"> $100
-                        <img src={hundred} alt='' className="photo"></img> 
+                        <p id="hundred-bill" className="photo"> $100
+                                <img src={hundred} alt=''></img> 
+                                <button class='btn-mon'></button>
                         {/* {props.value} */}
                         </p>
-                     </div>
                 </div> 
         </div>
         )}
