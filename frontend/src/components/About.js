@@ -3,9 +3,9 @@ import React from 'react';
 const About = () => {
   return (
     <header className="about-page">
-    <h3>
-     This piggy wants to be filled.
-    </h3>
+      <h3>
+        This piggy wants to be filled.
+      </h3>
     </header>
   );
 }

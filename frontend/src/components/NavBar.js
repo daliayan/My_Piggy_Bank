@@ -1,32 +1,45 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-//, Switch, Route
-// import About from '../components/About';
-// stateless navbar that does not change
+import React, { Component } from 'react';
+import {NavLink} from 'react-router-dom';
+import About from '../components/About';
 
-function NavBar() {
-  return (
+// function NavBar() {
+//   return (
+//       <div id="nav-bar" className="nav-bar">
+//       {/* <Switch>   */}
+//       <NavLink to="/banks"
+//         >🐷Home
+//       </NavLink>
+//       <NavLink to="/about">
+//             {About}
+//             {/* <About /> */}
+//              About 🐷
+//       </NavLink>
+//       {/* </Switch> */}
+//       </div>
+//     )
+// }
+// export default NavBar;
+
+
+export default class NavBar extends Component {
+
+  render() {
+    return (
       <div id="nav-bar" className="nav-bar">
-        
-      <Link to="/banks"
-        >🐷Home
-      </Link>
-      <Link to="/about">
-        {/* 🐷About🐷 */}
-        {/* <Route path="/about"> */}
-            {/* {About} */}
-            About 🐷
-            {/* </Route> */}
-      </Link>
-            {/* <div>
-            <Switch>
-              <Route path="/about">
-                <About />
-              </Route>
-            </Switch>
-          </div> */}
+        <NavLink to="/banks"
+          >🐷Home
+        </NavLink>
+
+        <NavLink to="/about">
+              {/* {About} */}
+              About 🐷
+              <About />
+        </NavLink>
       </div>
     )
+  }
 }
 
-export default NavBar;
+// function About(){
+//   return <h2>About</h2>;
+// }
