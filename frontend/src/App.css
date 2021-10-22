@@ -65,11 +65,24 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.pig-container{
+  position: relative;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
 .piggy-img{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 45%;
+}
+
+.pig-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form-button{
@@ -99,6 +112,8 @@
   float: left;
   width: 25%;
   padding: 20px; 
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .photo img{

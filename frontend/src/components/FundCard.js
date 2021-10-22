@@ -19,39 +19,42 @@ export default class FundCard extends Component {
                         funds: 0,
                         show: true
                 };
+
+                this.AddOne = this.AddOne.bind(this);
+                this.AddFive = this.AddFive.bind(this);
+                this.AddTen = this.AddTen.bind(this);
+                this.AddTwenty = this.AddTwenty.bind(this);
+                this.AddFifty = this.AddFifty.bind(this);
+                this.AddHundred = this.AddHundred.bind(this);
         }
 
-        AddOne(){
-                // this.setState({funds: this.state.funds + 1});
+        AddOne(event){
+                this.setState({funds: event.target.value + 1});
                 console.log(1);
         }
-        //event
 
-        AddFive(){
-                // this.setState({funds: this.state.funds + 5});
+        AddFive(event){
+                this.setState({funds: event.target.value + 5});
                 console.log(5);
         }
-        //event
 
-        AddTen(){
-                // this.setState({funds: this.state.funds + 10});
+        AddTen(event){
+                this.setState({funds: event.target.value + 10});
                 console.log(10);
         }
-        //event
 
-        AddTwenty(){
-                // this.setState({funds: this.state.funds + 20});
+        AddTwenty(event){
+                this.setState({funds: event.target.value + 20});
                 console.log(20);
         }
-        //event
 
-        AddFifty(){
-                // this.setState({funds: this.state.funds + 50});
+        AddFifty(event){
+                this.setState({funds: event.target.value + 50});
                 console.log(50);
         }
 
-        AddHundred(){
-                // this.setState({funds: this.state.funds + 100});
+        AddHundred(event){
+                this.setState({funds: event.target.value + 100});
                 console.log(100);
         }
 
@@ -59,34 +62,21 @@ export default class FundCard extends Component {
                 this.setState({ show: !this.state.show});
         }
 
-        // constructor(props){
-        //         super(props);
-        //         this.state = {
-        //                 dollar: 5,
-        //                 five: 5,
-        //                 ten: 10,
-        //                 twenty: 20,
-        //                 fifty: 50,
-        //                 hundred: 100
-        //         };
-        // }
-
-        // handleEvent(event){
-        //         this.setState({
-
-        //         })
-        // }
-
-        handleClick(){
-                console.log('clicked.....')
-        };
+        // handleClick(){
+        //         console.log('clicked.....')
+        // };
 
        render(){
         return (
         <div>
-                <img src={piggy} className='piggy-img' alt=''>
-                </img>
-                {this.state.show ? <h2>{this.state.funds}</h2> : ''}
+                <div className="pig-container">
+                        <img src={piggy} className='piggy-img' alt='' />
+                        <div className="pig-text">
+                        {/* value={this.props.value} */}
+                                {this.state.show ? <h2>{this.state.funds}</h2> : ''}
+                        </div>
+                </div>
+                
                 <div>
                         <p id="one-bill" className="photo"> $1
                                 <img src={one} alt=''></img>
@@ -123,6 +113,7 @@ export default class FundCard extends Component {
         )}
 }
 
+//{this.state.show ? <h2>{this.state.funds}</h2> : ''}
 
 
 // import {addOne, addFive, addTen, addTwenty, addFifty, addHundred} from '../actions/fetchFunds'
@@ -133,17 +124,22 @@ export default class FundCard extends Component {
 //         // console.log(props);
 
 
-//         // constructor(props){
-//         //         super(props);
-//         //         this.state = {
-//         //                 dollar: 5,
-//         //                 five: 5,
-//         //                 ten: 10,
-//         //                 twenty: 20,
-//         //                 fifty: 50,
-//         //                 hundred: 100
-//         //         };
-//         // }
+// constructor(props){
+        //         super(props);
+        //         this.state = {
+        //                 dollar: 5,
+        //                 five: 5,
+        //                 ten: 10,
+        //                 twenty: 20,
+        //                 fifty: 50,
+        //                 hundred: 100
+        //         };
+        // }
 
+        // handleEvent(event){
+        //         this.setState({
+
+        //         })
+        // }
 
 // export default FundCard;

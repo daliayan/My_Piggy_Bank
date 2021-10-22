@@ -75,7 +75,8 @@ export default class BankForm extends Component {
                     </div>
                     <br></br>
                     <div>
-                        <FundContainter />
+                        <FundContainter/>
+                        {/* value={this.props.value} */}
                     </div>
                     <div>
                         <button className="form-button">
