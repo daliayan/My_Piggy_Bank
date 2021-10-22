@@ -30,9 +30,9 @@ export default class NavBar extends Component {
         </NavLink>
 
         <NavLink to="/about">
-              {About}
+              {/* {About} */}
               About 🐷
-              {/* <About /> */}
+              <About />
         </NavLink>
       </div>
     )

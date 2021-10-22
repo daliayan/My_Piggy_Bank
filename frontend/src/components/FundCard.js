@@ -21,31 +21,41 @@ export default class FundCard extends Component {
                 };
         }
 
-        AddOne = () => {
-                this.setState({funds: this.state.funds + 1});
+        AddOne(){
+                // this.setState({funds: this.state.funds + 1});
+                console.log(1);
+        }
+        //event
+
+        AddFive(){
+                // this.setState({funds: this.state.funds + 5});
+                console.log(5);
+        }
+        //event
+
+        AddTen(){
+                // this.setState({funds: this.state.funds + 10});
+                console.log(10);
+        }
+        //event
+
+        AddTwenty(){
+                // this.setState({funds: this.state.funds + 20});
+                console.log(20);
+        }
+        //event
+
+        AddFifty(){
+                // this.setState({funds: this.state.funds + 50});
+                console.log(50);
         }
 
-        AddFive = () => {
-                this.setState({funds: this.state.funds + 1});
+        AddHundred(){
+                // this.setState({funds: this.state.funds + 100});
+                console.log(100);
         }
 
-        AddTen = () => {
-                this.setState({funds: this.state.funds + 1});
-        }
-
-        AddTwenty = () => {
-                this.setState({funds: this.state.funds + 1});
-        }
-
-        AddFifty = () => {
-                this.setState({funds: this.state.funds + 1});
-        }
-
-        AddHundred = () => {
-                this.setState({funds: this.state.funds + 1});
-        }
-
-        Total = () => {
+        Total(){
                 this.setState({ show: !this.state.show});
         }
 
@@ -76,36 +86,36 @@ export default class FundCard extends Component {
         <div>
                 <img src={piggy} className='piggy-img' alt=''>
                 </img>
-
+                {this.state.show ? <h2>{this.state.funds}</h2> : ''}
                 <div>
                         <p id="one-bill" className="photo"> $1
                                 <img src={one} alt=''></img>
-                                <button className='btn-mon' onClick={this.handleClick}></button>
+                                <button className='btn-mon' onClick={this.AddOne}></button>
                         </p>
 
                         <p id="five-bill" className="photo"> $5
                                 <img src={five} alt=''></img>
-                                <button className='btn-mon' onClick={this.handleClick}></button>
+                                <button className='btn-mon' onClick={this.AddFive}></button>
                         </p>
                 
                         <p id="ten-bill" className="photo"> $10
                                 <img src={ten} alt=''></img>
-                                <button className='btn-mon' onClick={this.handleClick}></button>
+                                <button className='btn-mon' onClick={this.AddTen}></button>
                         </p>
 
                         <p id="twenty-bill" className="photo"> $20
                                 <img src={twenty} alt=''></img>
-                                <button className='btn-mon' onClick={this.handleClick}></button>
+                                <button className='btn-mon' onClick={this.AddTwenty}></button>
                         </p>
 
                         <p id="fifty-bill" className="photo"> $50
                                 <img src={fifty} alt='' ></img>
-                                <button className='btn-mon' onClick={this.handleClick}></button>
+                                <button className='btn-mon' onClick={this.AddFifty}></button>
                         </p>
 
                         <p id="hundred-bill" className="photo"> $100
                                 <img src={hundred} alt=''></img> 
-                                <button className='btn-mon' onClick={this.handleClick}></button>
+                                <button className='btn-mon' onClick={this.AddHundred}></button>
                         {/* {props.value} */}
                         </p>
                 </div> 
