@@ -13,6 +13,42 @@ import hundred from '../images/money/hundred.jpg';
 
 export default class FundCard extends Component {
 
+        constructor(props){
+                super(props);
+                this.state = {
+                        funds: 0,
+                        show: true
+                };
+        }
+
+        AddOne = () => {
+                this.setState({funds: this.state.funds + 1});
+        }
+
+        AddFive = () => {
+                this.setState({funds: this.state.funds + 1});
+        }
+
+        AddTen = () => {
+                this.setState({funds: this.state.funds + 1});
+        }
+
+        AddTwenty = () => {
+                this.setState({funds: this.state.funds + 1});
+        }
+
+        AddFifty = () => {
+                this.setState({funds: this.state.funds + 1});
+        }
+
+        AddHundred = () => {
+                this.setState({funds: this.state.funds + 1});
+        }
+
+        Total = () => {
+                this.setState({ show: !this.state.show});
+        }
+
         // constructor(props){
         //         super(props);
         //         this.state = {

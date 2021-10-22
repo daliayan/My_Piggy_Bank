@@ -40,7 +40,6 @@ export default class BankForm extends Component {
         event.preventDefault();
         
         const submittedData = this.state;
-        // submittedData.push(this.props.value);
         this.setState({bankData: submittedData});
 
         fetch('http://localhost:3000/banks', {
@@ -82,7 +81,6 @@ export default class BankForm extends Component {
                         <button className="form-button">
                             Create Piggy Bank
                         </button>
-                        {/* onClick={this.handleClick()} */}
                     </div>
                 </form>
             </div>

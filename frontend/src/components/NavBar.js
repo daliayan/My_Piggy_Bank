@@ -20,7 +20,6 @@ import About from '../components/About';
 // }
 // export default NavBar;
 
-
 export default class NavBar extends Component {
 
   render() {
@@ -31,9 +30,9 @@ export default class NavBar extends Component {
         </NavLink>
 
         <NavLink to="/about">
-              {/* {About} */}
+              {About}
               About 🐷
-              <About />
+              {/* <About /> */}
         </NavLink>
       </div>
     )
