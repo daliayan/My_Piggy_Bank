@@ -31,21 +31,19 @@ class App extends Component {
         <Header />
         <Router>
           <NavBar />
-          <Switch>
-          <div>
-            <Route path="/about">
-              <About />
-            </Route>
-
-            <Route path="/banks" />
-            
-            <BankContainer />
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/banks" />
+          {/* <Route path="/new">
             <BankFormContainer />
-            {/* <Route path="/new">
-              <BankFormContainer />
-            </Route> */}
+          </Route> */}
 
-          </div>
+          <Switch>
+            <> 
+              <BankContainer />
+              <BankFormContainer />
+            </>
           </Switch>
         </Router>
       </div>
