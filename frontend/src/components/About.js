@@ -3,9 +3,12 @@ import React from 'react';
 const About = () => {
   return (
     <header className="about-page">
-      <h3>
+      <p>
         This piggy wants to be filled.
-      </h3>
+      </p>
+      <p>
+        In this application you can create a piggy bank of your own, complete with a name, gender, and dollar amount.
+      </p>
     </header>
   );
 }

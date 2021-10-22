@@ -1,13 +1,13 @@
 import {Component} from 'react';
 import './App.css';
-import { BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import  Header from './components/Header';
 import  NavBar from './components/NavBar';
 import {fetchBanks} from './actions/fetchBanks';
 import {connect} from "react-redux";
 import BankContainer from './containers/BankContainer';
 import BankFormContainer from './containers/BankFormContainer';
-// import About from './components/About';
+import About from './components/About';
 
 
 class App extends Component {
@@ -28,13 +28,25 @@ class App extends Component {
   render(){
     return (
       <div className="App">
+        <Header />
         <Router>
+          <NavBar />
+          <Switch>
           <div>
-            <Header />
-            <NavBar />
+            <Route path="/about">
+              <About />
+            </Route>
+
+            <Route path="/banks" />
+            
             <BankContainer />
             <BankFormContainer />
+            {/* <Route path="/new">
+              <BankFormContainer />
+            </Route> */}
+
           </div>
+          </Switch>
         </Router>
       </div>
     );

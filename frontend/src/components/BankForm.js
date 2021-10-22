@@ -59,18 +59,18 @@ export default class BankForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit} >
-                    <h2 className="piggy-bank-form">Make Your Own Piggy Bank 🐷💰</h2>
+                    <h2 className="piggy-bank-form">MAKE YOUR OWN 🐷💰</h2>
                     <br></br>
                     <div className="piggy-bank-form-text">
-                        <label>Name: </label>
+                        <label>NAME: </label>
                         <input id="name" type="text" value={this.props.value} onChange={this.handleName} required/>
                     </div>
                     <br></br>
                     <div className="piggy-bank-form-dropdown">
-                        <label >Gender: </label>
+                        <label >GENDER: </label>
                         <select id="gender" value={this.props.value} onChange={this.handleChange} >
-                            <option>Girl</option>
-                            <option>Boy</option>
+                            <option>GIRL</option>
+                            <option>BOY</option>
                         </select>
                     </div>
                     <br></br>

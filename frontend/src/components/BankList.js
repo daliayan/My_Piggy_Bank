@@ -59,9 +59,9 @@ class BankList extends Component {
     render(){
         return (
             <div>
-                <h3>
+                <h2>
                     ALL PIGGY BANKS
-                </h3>
+                </h2>
 
                 {this.state.bankData.map((bank) => <div className="bank-list-data">
                 <p>
