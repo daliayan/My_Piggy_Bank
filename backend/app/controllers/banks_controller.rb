@@ -46,6 +46,6 @@ class BanksController < ApplicationController
     end
 
     def bank_params
-        params.require(:bank).permit(:name, :gender, :amount) #might need :amount here but not to create bank????
+        params.require(:bank).permit(:name, :gender, :fund) #might need :amount here but not to create bank????
     end
 end

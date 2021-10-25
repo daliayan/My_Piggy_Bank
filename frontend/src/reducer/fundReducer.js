@@ -1,10 +1,10 @@
 // create variable to add or decrease piggy bank fund
 // taking fund values + adding them to each piggy bank
 
-export default function fundReducer(state = {money: 0}, action){
+export default function fundReducer(state = {fund: 0}, action){
     switch(action.type){
         case "ADD":
-            return {...state, money: state.money + action.payload}
+            return {...state, fund: state.fund + action.payload}
         // case "SUBTRACT":
         //     return {...state, money: state.money - action.fund}
         default:

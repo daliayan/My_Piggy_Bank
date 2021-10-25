@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 1) do
   create_table "banks", force: :cascade do |t|
     t.string "name"
     t.string "gender"
-    t.integer "amount"
+    t.integer "fund"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

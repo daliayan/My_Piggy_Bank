@@ -59,7 +59,7 @@ export default class FundCard extends Component {
         }
 
         Total(){
-                this.setState({ show: !this.state.show});
+                this.setState({ show: !this.state.show });
         }
 
         // handleClick(){

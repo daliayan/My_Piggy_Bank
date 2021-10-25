@@ -8,13 +8,12 @@ export default class BankForm extends Component {
         this.state = {
             name: '',
             gender: '',
-            fund: null
-            //fund: ''
+            fund: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleName = this.handleName.bind(this);
-        // this.handleFunds = this.handleFunds.bind(this);
+        this.handleFunds = this.handleFunds.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -30,11 +29,11 @@ export default class BankForm extends Component {
         })
     }
 
-    // handleFunds(event){
-    //     this.setState({
-    //         fund: Number(event.target.value),
-    //     })
-    // }
+    handleFunds(event){
+        this.setState({
+            fund: Number(event.target.value),
+        })
+    }
 
     handleSubmit(event) {
         event.preventDefault();
@@ -75,7 +74,7 @@ export default class BankForm extends Component {
                     </div>
                     <br></br>
                     <div>
-                        <FundContainter/>
+                        <FundContainter value={this.props.value} onChange={this.handleFunds}/>
                         {/* value={this.props.value} */}
                     </div>
                     <div>
