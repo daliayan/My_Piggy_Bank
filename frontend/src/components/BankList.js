@@ -12,11 +12,6 @@ class BankList extends Component {
         bankData: []
     }
 
-    // deleteBank(bank){
-    //     const byePiggy = this.state.bankData.filter(index => index !== bank)
-    //     this.setState({bankData: byePiggy});
-    // }
-
     deleteBank(bank){
         const byePiggy = this.state.bankData.filter(index => index !== bank)
 
@@ -64,12 +59,12 @@ class BankList extends Component {
                 </h2>
 
                 {this.state.bankData.map((bank) => <div className="bank-list-data">
-                <p>
-                 {bank.name} - {bank.gender} - ${bank.fund}
+                <ol>
+                 {bank.name} is a {bank.gender} 🐖 with ${bank.fund} 💰 
                     <button onClick={() => {this.deleteBank(bank)}}  key={bank} className="delete-button" >
                         DELETE
                     </button>
-                </p>
+                </ol>
                 </div>)}
             </div>
         )

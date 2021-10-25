@@ -5,7 +5,7 @@ import FundCard from '../components/FundCard';
 const FundContainter = () => {
         return (
             <div id="fund-container" className="fund-container"> 
-                <FundCard /> 
+                <FundCard/> 
             </div>
         )
 }
