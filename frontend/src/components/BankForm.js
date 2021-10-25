@@ -32,7 +32,7 @@ export default class BankForm extends Component {
     handleFunds(fund){
         this.setState( (state) => {
                 return {
-                       funds: parseInt(fund.target.value) + state.funds.value
+                       fund: parseInt(fund.target.value) + state.fund.value
                 }
         })
     }
@@ -46,7 +46,7 @@ export default class BankForm extends Component {
 
     // handleFunds(fund){
     //     this.setState({
-    //         funds: parseInt(fund.target.value)
+    //         fund: parseInt(fund.target.value) + fund.value
     //     })
     // }
 
@@ -94,7 +94,7 @@ export default class BankForm extends Component {
                     </div>
                     <br></br>
                     <div>
-                        <FundContainter value={this.props.value} onChange={this.handleFunds} id="fund"/>
+                        <FundContainter value={this.props.fund} onChange={this.handleFunds} id="fund"/>
                         {/* value={this.props.value} */}
                         {/* fundAmount */}
                     </div>

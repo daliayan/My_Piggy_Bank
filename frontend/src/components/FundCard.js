@@ -14,7 +14,7 @@ export default class FundCard extends Component {
         constructor(props){
                 super(props);
                 this.state = {
-                        funds: 0,
+                        fund: 0,
                 };
                 this.AddMoney = this.AddMoney.bind(this);
         }
@@ -22,7 +22,7 @@ export default class FundCard extends Component {
         AddMoney(event){
                 this.setState( (state) => {
                         return {
-                               funds: parseInt(event.target.value) + state.funds
+                               fund: parseInt(event.target.value) + state.fund
                         }
                 })
         }
@@ -33,7 +33,7 @@ export default class FundCard extends Component {
                 <div className="pig-container">
                         <img src={piggy} className='piggy-img' alt='' />
                         <div className="pig-text">
-                                { <h2>{this.state.funds}</h2>}
+                                { <h1>{this.state.fund}</h1>}
                         </div>
                 </div>
                 
