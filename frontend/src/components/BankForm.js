@@ -8,7 +8,7 @@ export default class BankForm extends Component {
         this.state = {
             name: '',
             gender: '',
-            fund: ''
+            fund: 0
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -31,7 +31,7 @@ export default class BankForm extends Component {
 
     handleFunds(event){
         this.setState({
-            fund: Number(event.target.value),
+            fund: event.target.value,
         })
     }
 
