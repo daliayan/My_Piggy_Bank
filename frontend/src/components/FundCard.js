@@ -68,19 +68,13 @@ export default class FundCard extends Component {
                 this.setState({ show: !this.state.show });
         }
 
-        // handleClick(){
-        //         console.log('clicked.....')
-        // };
-
        render(){
         return (
         <div>
                 <div className="pig-container">
                         <img src={piggy} className='piggy-img' alt='' />
                         <div className="pig-text">
-                        {/* value={this.props.value} */}
                                 { <h2>{this.state.funds}</h2>}
-                                {/* this.state.show ?  : ''*/}
                         </div>
                 </div>
                 
@@ -113,40 +107,8 @@ export default class FundCard extends Component {
                         <p id="hundred-bill" className="photo"> $100
                                 <img src={hundred} alt=''></img> 
                                 <button className='btn-mon' onClick={this.AddDollar} value={100}></button>
-                        {/* {props.value} */}
                         </p>
                 </div> 
         </div>
         )}
 }
-
-//{this.state.show ? <h2>{this.state.funds}</h2> : ''}
-
-
-// import {addOne, addFive, addTen, addTwenty, addFifty, addHundred} from '../actions/fetchFunds'
-// // import fundReducer from '../reducer/fundReducer.js';
-
-
-// const FundCard = (props) => {
-//         // console.log(props);
-
-
-// constructor(props){
-        //         super(props);
-        //         this.state = {
-        //                 dollar: 5,
-        //                 five: 5,
-        //                 ten: 10,
-        //                 twenty: 20,
-        //                 fifty: 50,
-        //                 hundred: 100
-        //         };
-        // }
-
-        // handleEvent(event){
-        //         this.setState({
-
-        //         })
-        // }
-
-// export default FundCard;
