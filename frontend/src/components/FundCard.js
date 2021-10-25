@@ -29,14 +29,11 @@ export default class FundCard extends Component {
         }
 
         AddDollar(event){
-                // this.setState({funds: event.target.value + 1});
                 this.setState( (state) => {
-                        // debugger
                         return {
                                funds: parseInt(event.target.value) + state.funds
                         }
-                }, () => console.log(this.state))
-                // console.log(1);
+                })
         }
 
         // AddFive(event){
