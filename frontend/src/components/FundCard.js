@@ -9,7 +9,6 @@ import twenty from '../images/money/twenty.jpg';
 import fifty from '../images/money/fifty.jpg';
 import hundred from '../images/money/hundred.jpg';
 // import fundReducer from '../reducer/fundReducer.js';
-// assiging the $$ their values
 
 export default class FundCard extends Component {
 
@@ -19,13 +18,7 @@ export default class FundCard extends Component {
                         funds: 0,
                         show: true
                 };
-
                 this.AddDollar = this.AddDollar.bind(this);
-                // this.AddFive = this.AddFive.bind(this);
-                // this.AddTen = this.AddTen.bind(this);
-                // this.AddTwenty = this.AddTwenty.bind(this);
-                // this.AddFifty = this.AddFifty.bind(this);
-                // this.AddHundred = this.AddHundred.bind(this);
         }
 
         AddDollar(event){
@@ -35,31 +28,6 @@ export default class FundCard extends Component {
                         }
                 })
         }
-
-        // AddFive(event){
-        //         this.setState({funds: event.target.value + 5});
-        //         console.log(5);
-        // }
-
-        // AddTen(event){
-        //         this.setState({funds: event.target.value + 10});
-        //         console.log(10);
-        // }
-
-        // AddTwenty(event){
-        //         this.setState({funds: event.target.value + 20});
-        //         console.log(20);
-        // }
-
-        // AddFifty(event){
-        //         this.setState({funds: event.target.value + 50});
-        //         console.log(50);
-        // }
-
-        // AddHundred(event){
-        //         this.setState({funds: event.target.value + 100});
-        //         console.log(100);
-        // }
 
         Total(){
                 this.setState({ show: !this.state.show });
