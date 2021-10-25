@@ -3,11 +3,11 @@ import React from 'react';
 import FundCard from '../components/FundCard';
 
 const FundContainter = () => {
-        return (
-            <div id="fund-container" className="fund-container"> 
-                <FundCard/> 
-            </div>
-        )
+    return (
+        <div id="fund-container" className="fund-container"> 
+            <FundCard/> 
+        </div>
+    )
 }
 
 export default FundContainter;
