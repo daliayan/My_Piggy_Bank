@@ -29,11 +29,17 @@ export default class BankForm extends Component {
         })
     }
 
-    handleFunds(event){
+    handleFunds(dollarAmount){
         this.setState({
-            fund: event.target.value,
+            funds: parseInt(dollarAmount.target.value)
         })
     }
+
+    // handleFunds(event){
+    //     this.setState({
+    //         fund: event.target.value,
+    //     })
+    // }
 
     handleSubmit(event) {
         event.preventDefault();
@@ -51,8 +57,6 @@ export default class BankForm extends Component {
         });
         window.location.replace('http://localhost:3001')
     }
-    
-    // var handleDataUpdate = this.props.fetchNewData;
 
     render(){
         return (
@@ -78,7 +82,7 @@ export default class BankForm extends Component {
                         {/* value={this.props.value} */}
                     </div>
                     <div>
-                        <button className="form-button">
+                        <button className="form-button" type="submit">
                             Create Piggy Bank
                         </button>
                     </div>
