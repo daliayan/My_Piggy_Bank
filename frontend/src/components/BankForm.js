@@ -31,33 +31,14 @@ export default class BankForm extends Component {
 
     handleFunds(addedMoney){
         this.setState( (state) => {
-            // debugger
                 return {
                        fund: addedMoney + state.fund
-                }
-
-                
-        }, () => console.log(this.state))
+                }       
+        })
     }
 
-    // handleFunds(fund){
-    //     this.setState(
-    //            return {
-    //                  funds: parseInt(fund.target.value)
-    //             })
-    // }
+    // , () => console.log(this.state)
 
-    // handleFunds(fund){
-    //     this.setState({
-    //         fund: parseInt(fund.target.value) + fund.value
-    //     })
-    // }
-
-    // handleFunds(event){
-    //     this.setState({
-    //         fund: event.target.value,
-    //     })
-    // }
 
     handleSubmit(event) {
         event.preventDefault();
@@ -77,8 +58,6 @@ export default class BankForm extends Component {
     }
 
     render(){
-        // const fundAmount = this.state.fund
-        // console.log(this.fund)
         return (
             <div>
                 <form onSubmit={this.handleSubmit} >
@@ -99,8 +78,6 @@ export default class BankForm extends Component {
                     <br></br>
                     <div>
                         <FundCard dollars={this.state.fund} updateBankFund={this.handleFunds} id="fund"/>
-                        {/* value={this.props.value} */}
-                        {/* fundAmount */}
                     </div>
                     <div>
                         <button className="form-button" type="submit">
