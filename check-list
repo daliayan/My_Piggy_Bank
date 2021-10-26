@@ -10,11 +10,11 @@ REQUIREMENTS
 
 - [x]There should be 5 stateless components
 
-- []    There should be 3 routes
+- [x]    There should be 3 routes
 
 - [x]    The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please 
 
-- [x]    Use Redux middleware to respond to and modify state change
+- []    Use Redux middleware to respond to and modify state change
 
 - [x]    Make use of async actions and redux-thunk middleware to send data to and receive data from a server
 
