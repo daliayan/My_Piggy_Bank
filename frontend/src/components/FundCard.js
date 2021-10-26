@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import {connect} from "react-redux";
 
 import piggy from '../images/piggy.jpg';
 import one from '../images/money/one.jpg';
@@ -17,7 +16,7 @@ export default class FundCard extends Component {
 
        render(){
         return (
-        <div>
+        <div className="fund-container">
                 <div className="pig-container">
                         <img src={piggy} className='piggy-img' alt='' />
                         <div className="pig-text">
