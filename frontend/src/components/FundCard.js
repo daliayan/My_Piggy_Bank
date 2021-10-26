@@ -11,26 +11,11 @@ import hundred from '../images/money/hundred.jpg';
 
 export default class FundCard extends Component {
 
-        // constructor(props){
-        //         super(props);
-        //         // this.state = {
-        //         //         fund: 0,
-        //         // };
-        //         // this.AddMoney = this.AddMoney.bind(this);
-        // }
-
-
         AddMoney(event){
                 this.props.updateBankFund(parseInt(event.target.value))
-                // this.setState( (state) => {
-                //         return {
-                //                fund: parseInt(event.target.value) + state.fund
-                //         }
-                // })
         }
 
        render(){
-        //        console.log(this.props)
         return (
         <div>
                 <div className="pig-container">
