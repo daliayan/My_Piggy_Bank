@@ -4,10 +4,9 @@ const About = () => {
   return (
     <header className="about-page">
       <p>
-        This piggy wants to be filled.
-      </p>
-      <p>
-        In this application you can create a piggy bank of your own, complete with a name, gender, and dollar amount.
+        This piggy bank wants to be filled.
+        In this application you can create a piggy bank of your own, complete with a name, gender, and dollar amount. 
+        This application was created using Ruby on Rails for the backend data and utilized JavaScript, React and Redux for the front end component.
       </p>
     </header>
   );
