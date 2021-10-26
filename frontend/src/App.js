@@ -8,6 +8,7 @@ import {connect} from "react-redux";
 import BankContainer from './containers/BankContainer';
 import BankFormContainer from './containers/BankFormContainer';
 import About from './components/About';
+import Biography from './components/Biography';
 
 
 class App extends Component {
@@ -34,10 +35,10 @@ class App extends Component {
           <Route path="/about">
             <About />
           </Route>
+          <Route path="/biography">
+            <Biography />
+          </Route>
           <Route path="/banks" />
-          {/* <Route path="/new">
-            <BankFormContainer />
-          </Route> */}
 
           <Switch>
             <> 

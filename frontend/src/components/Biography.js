@@ -2,7 +2,7 @@ import React from 'react';
 
 const Biography = () => {
   return (
-    <header className="about-page">
+    <header className="bio-page">
       <p>
         My name is Dalia.
       </p>
