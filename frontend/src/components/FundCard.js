@@ -13,59 +13,62 @@ export default class FundCard extends Component {
 
         constructor(props){
                 super(props);
-                this.state = {
-                        fund: 0,
-                };
-                this.AddMoney = this.AddMoney.bind(this);
+                // this.state = {
+                //         fund: 0,
+                // };
+                // this.AddMoney = this.AddMoney.bind(this);
         }
 
+
         AddMoney(event){
-                this.setState( (state) => {
-                        return {
-                               fund: parseInt(event.target.value) + state.fund
-                        }
-                })
+                this.props.updateBankFund(parseInt(event.target.value))
+                // this.setState( (state) => {
+                //         return {
+                //                fund: parseInt(event.target.value) + state.fund
+                //         }
+                // })
         }
 
        render(){
+               console.log(this.props)
         return (
         <div>
                 <div className="pig-container">
                         <img src={piggy} className='piggy-img' alt='' />
                         <div className="pig-text">
-                                { <h1>{this.state.fund}</h1>}
+                                { <h1>{this.props.dollars}</h1>}
                         </div>
                 </div>
                 
                 <div>
                         <p id="one-bill" className="photo"> $1
                                 <img src={one} alt=''></img>
-                                <button className='btn-mon' onClick={this.AddMoney} value={1} type="button"></button>
+                                <button className='btn-mon' onClick={(event) => {this.AddMoney(event)}} value={1} type="button"></button>
                         </p>
 
                         <p id="five-bill" className="photo"> $5
                                 <img src={five} alt=''></img>
-                                <button className='btn-mon' onClick={this.AddMoney} value={5} type="button"></button>
+                                <button className='btn-mon' onClick={(event) => {this.AddMoney(event)}} value={5} type="button"></button>
                         </p>
                 
                         <p id="ten-bill" className="photo"> $10
                                 <img src={ten} alt=''></img>
-                                <button className='btn-mon' onClick={this.AddMoney} value={10} type="button"></button>
+                                <button className='btn-mon' onClick={(event) => {this.AddMoney(event)}} value={10} type="button"></button>
                         </p>
 
                         <p id="twenty-bill" className="photo"> $20
                                 <img src={twenty} alt=''></img>
-                                <button className='btn-mon' onClick={this.AddMoney} value={20} type="button"></button>
+                                <button className='btn-mon' onClick={(event) => {this.AddMoney(event)}} value={20} type="button"></button>
                         </p>
 
                         <p id="fifty-bill" className="photo"> $50
                                 <img src={fifty} alt='' ></img>
-                                <button className='btn-mon' onClick={this.AddMoney} value={50} type="button"></button>
+                                <button className='btn-mon' onClick={(event) => {this.AddMoney(event)}} value={50} type="button"></button>
                         </p>
 
                         <p id="hundred-bill" className="photo"> $100
                                 <img src={hundred} alt=''></img> 
-                                <button className='btn-mon' onClick={this.AddMoney} value={100} type="button"></button>
+                                <button className='btn-mon' onClick={(event) => {this.AddMoney(event)}} value={100} type="button"></button>
                         </p>
                 </div> 
         </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FundContainter from '../containers/FundContainer';
+import FundCard from '../components/FundCard';
 
 export default class BankForm extends Component {
 
@@ -29,12 +29,15 @@ export default class BankForm extends Component {
         })
     }
 
-    handleFunds(fund){
+    handleFunds(addedMoney){
         this.setState( (state) => {
+            // debugger
                 return {
-                       fund: parseInt(fund.target.value) + state.fund.value
+                       fund: addedMoney + state.fund
                 }
-        })
+
+                
+        }, () => console.log(this.state))
     }
 
     // handleFunds(fund){
@@ -75,6 +78,7 @@ export default class BankForm extends Component {
 
     render(){
         // const fundAmount = this.state.fund
+        // console.log(this.fund)
         return (
             <div>
                 <form onSubmit={this.handleSubmit} >
@@ -82,19 +86,19 @@ export default class BankForm extends Component {
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label>NAME: </label>
-                        <input id="name" type="text" value={this.props.value} onChange={this.handleName} required/>
+                        <input id="name" type="text" value={this.name} onChange={this.handleName} required/>
                     </div>
                     <br></br>
                     <div className="piggy-bank-form-dropdown">
                         <label >GENDER: </label>
-                        <select id="gender" value={this.props.value} onChange={this.handleChange} >
+                        <select id="gender" value={this.gender} onChange={this.handleChange} >
                             <option>GIRL</option>
                             <option>BOY</option>
                         </select>
                     </div>
                     <br></br>
                     <div>
-                        <FundContainter value={this.props.fund} onChange={this.handleFunds} id="fund"/>
+                        <FundCard dollars={this.state.fund} updateBankFund={this.handleFunds} id="fund"/>
                         {/* value={this.props.value} */}
                         {/* fundAmount */}
                     </div>
