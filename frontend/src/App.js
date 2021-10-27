@@ -21,11 +21,6 @@ class App extends Component {
     fetchBanks();
   }
 
-
-  // onClick = () => {
-  //   this.setState.bind(this.state.query)
-  // }
-
   render(){
     return (
       <div className="App">
