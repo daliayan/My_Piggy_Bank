@@ -16,10 +16,6 @@ const banksReducer = (state = {banks: [], loading: false}, action) => {
                 index => action.payload.id !== index.id
             );
             return deletingBank()
-            // const deletingBank = state.banks.splice(index, 1)
-            // return  state.banks.filter(
-            //     index => action.payload.id !== index.id
-            // );
         default:
             return state;
     }
