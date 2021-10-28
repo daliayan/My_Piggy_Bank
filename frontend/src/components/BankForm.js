@@ -52,8 +52,13 @@ export default class BankForm extends Component {
                 'Accept': 'application/json'
             },
             body: JSON.stringify(submittedData),
-        });
-        window.location.replace('http://localhost:3001')
+        })
+        .then(resp => resp.json())
+        // .then(data => {debugger});
+        // window.location.replace('http://localhost:3001')
+        // window.location.reload(false);
+        // sessionStorage.clear()
+        // sessionStorage.setItem()
     }
 
     render(){

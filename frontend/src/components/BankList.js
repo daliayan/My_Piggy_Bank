@@ -61,7 +61,7 @@ class BankList extends Component {
                 {this.state.bankData.map((bank) => <div className="bank-list-data">
                 <ol>
                  {bank.name} is a {bank.gender} 🐖 with ${bank.fund} 💰 
-                    <button onClick={() => {this.deleteBank(bank)}}  key={bank} className="delete-button" >
+                    <button onClick={() => {this.deleteBank(bank)}}  key={bank.key} className="delete-button" >
                         DELETE
                     </button>
                 </ol>
