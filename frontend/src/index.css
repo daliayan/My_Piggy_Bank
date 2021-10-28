@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: rgb(243, 217, 235); */
-  background: url(images/oinky.jpg) no-repeat center center fixed; 
+  background-color: rgb(246, 214, 230);
+  /* background: url(images/oinky.jpg) no-repeat center center fixed;  */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

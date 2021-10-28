@@ -36,7 +36,6 @@ export default class BankForm extends Component {
                 }       
         })
     }
-
     // , () => console.log(this.state)
 
 
