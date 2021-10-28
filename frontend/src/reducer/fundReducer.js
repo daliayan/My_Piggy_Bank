@@ -5,8 +5,6 @@ export default function fundReducer(state = {fund: 0}, action){
     switch(action.type){
         case "ADD":
             return {...state, fund: state.fund + action.payload}
-        // case "SUBTRACT":
-        //     return {...state, money: state.money - action.fund}
         default:
             return state 
     }

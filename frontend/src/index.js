@@ -5,7 +5,6 @@ import {Provider} from 'react-redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import fundReducer from './reducer/fundReducer.js';
 import banksReducer from './reducer/banksReducer.js';
 import thunk from 'redux-thunk';
 
