@@ -13,9 +13,9 @@ import Biography from './components/Biography';
 
 class App extends Component {
 
-  state = {
-    banks: [],
-  }
+  // state = {
+  //   banks: [],
+  // }
   
   componentDidMount(){
     fetchBanks();
@@ -50,15 +50,17 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
     banks: state.banks,
-    loading: state.loading
+    // loading: state.loading
   }
 }
 // connect to global state to pass part of the state to the component as a prop
 
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (globalDispatch) => {
   return {
-    fetchBanks: () => dispatch(fetchBanks())
+    fetchBanksDispatch: () => globalDispatch(fetchBanks()),
+    // fetchBanksDispatch: (dataObject) => globalDispatch(fetchBanks(dataObject)),
+    // deletingBank: () => globalDispatch(deletingBank())
   }
 }
 //to update+change the global state

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FundCard from '../components/FundCard';
+// import {fetchBanks} from './actions/fetchBanks';
 
 export default class BankForm extends Component {
 
@@ -40,7 +41,7 @@ export default class BankForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        
+        // this.props.fetchBanksDispatch(this.state);
         const submittedData = this.state;
         this.setState({bankData: submittedData});
 
@@ -53,8 +54,13 @@ export default class BankForm extends Component {
             body: JSON.stringify(submittedData),
         })
         .then(resp => resp.json())
+
+        .then(json => {
+            this.setState({submittedData: json})
+        })
         // .then(data => {debugger});
-        window.location.replace('http://localhost:3001')
+
+        // window.location.replace('http://localhost:3001')
         // window.location.reload(false);
         // sessionStorage.clear()
         // sessionStorage.setItem()
