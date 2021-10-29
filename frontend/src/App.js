@@ -18,10 +18,7 @@ class App extends Component {
   }
   
   componentDidMount(){
-    // fetchBanks();
-    fetch('http://localhost:3000/banks') 
-    .then(resp => resp.json())
-    .then(banks => this.props.fetchBanksDispatch(banks)) // dispatching action to a reducer
+    fetchBanks();
   }
 
   render(){

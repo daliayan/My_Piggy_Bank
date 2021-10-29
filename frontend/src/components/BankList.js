@@ -5,11 +5,15 @@ class BankList extends Component {
     componentDidMount(){
         fetch('http://localhost:3000/banks') 
         .then(resp => resp.json())
-        .then(banks => this.setState({bankData: banks} ))
+        .then(banks => this.props.fetchBanksDispatch(banks))
+            //this.setState({bankData: banks} ))
         //(banks => this.props.fetchBanksDispatch(banks))
             // need to set up my action to dispatch
             // ({bankData: banks})
             //  this.setState({bankData: banks} ))
+        // fetch('http://localhost:3000/banks') 
+        // .then(resp => resp.json())
+        // .then(banks => this.props.fetchBanksDispatch(banks)) // dispatching action to a reducer
     }
 
     state = {
