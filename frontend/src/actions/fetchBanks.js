@@ -6,7 +6,7 @@ export function fetchBanks() {
       //   dispatch({ type: 'LOADING_BANKS' });
         fetch('http://localhost:3000/banks') 
        .then(resp => resp.json())
-       .then(json => dispatch(loadBanks(json)))
+       .then(json => dispatch(loadBanks(json))) // dispatching an action to reducer
       //  .then((resp) => dispatch({type: 'ADD_BANKS', banks: resp.bank}))
     }
 }
