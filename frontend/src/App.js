@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import  Header from './components/Header';
 import  NavBar from './components/NavBar';
-import {fetchBanks} from './actions/fetchBanks';
+import {fetchBanks, loadBanks} from './actions/fetchBanks';
 import {connect} from "react-redux";
 import BankContainer from './containers/BankContainer';
 import BankFormContainer from './containers/BankFormContainer';
@@ -60,7 +60,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (globalDispatch) => {
   return {
     // fetchBanksDispatch: () => globalDispatch(fetchBanks()),
-    fetchBanksDispatch: (banks) => globalDispatch({type: 'ADD_BANKS', payload: banks}),
+    fetchBanksDispatch: (banks) => globalDispatch(loadBanks(banks)),
     // fetchBanksDispatch: (dataObject) => globalDispatch(fetchBanks(dataObject)),
     // deletingBank: () => globalDispatch(deletingBank())
   }

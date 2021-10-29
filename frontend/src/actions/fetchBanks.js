@@ -3,9 +3,13 @@ export function fetchBanks() {
         dispatch({ type: 'LOADING_BANKS' });
         fetch('http://localhost:3000/banks') 
        .then(resp => resp.json())
-       .then((resp) => dispatch({type: 'ADD_BANKS', banks: resp.bank}))
+       .then(banks => this.props.fetchBanksDispatch(banks))
+      //  .then((resp) => dispatch({type: 'ADD_BANKS', banks: resp.bank}))
     }
 }
+
+export const loadBanks = (banks) => ({type: 'ADD_BANKS', payload: banks});
+export const deleteBanks = (banks) => ({type: 'DELETE_BANKS', payload: banks});
 
 // export function fetchNewData(formData) {
 //    const configObj = {

@@ -41,7 +41,7 @@ export default class BankForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        // this.props.fetchBanksDispatch(this.state);
+        this.props.fetchBanksDispatch(this.state);
 
         // const submittedData = this.state;
         // this.setState({bankData: submittedData});
