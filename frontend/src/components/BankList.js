@@ -6,6 +6,10 @@ class BankList extends Component {
         fetch('http://localhost:3000/banks') 
         .then(resp => resp.json())
         .then(banks => this.setState({bankData: banks} ))
+        //(banks => this.props.fetchBanksDispatch(banks))
+            // need to set up my action to dispatch
+            // ({bankData: banks})
+            //  this.setState({bankData: banks} ))
     }
 
     state = {

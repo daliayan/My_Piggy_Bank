@@ -42,22 +42,23 @@ export default class BankForm extends Component {
     handleSubmit(event) {
         event.preventDefault();
         // this.props.fetchBanksDispatch(this.state);
-        const submittedData = this.state;
-        this.setState({bankData: submittedData});
 
-        fetch('http://localhost:3000/banks', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(submittedData),
-        })
-        .then(resp => resp.json())
+        // const submittedData = this.state;
+        // this.setState({bankData: submittedData});
 
-        .then(json => {
-            this.setState({submittedData: json})
-        })
+        // fetch('http://localhost:3000/banks', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Accept': 'application/json'
+        //     },
+        //     body: JSON.stringify(submittedData),
+        // })
+        // .then(resp => resp.json())
+
+        // .then(json => {
+        //     this.setState({submittedData: json})
+        // })
         // .then(data => {debugger});
 
         // window.location.replace('http://localhost:3001')

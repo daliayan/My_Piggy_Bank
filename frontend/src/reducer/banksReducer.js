@@ -3,13 +3,11 @@ const banksReducer = (state = {banks: [], loading: false}, action) => {
         case 'LOADING_BANKS':
             return {
                 ...state,
-                banks: [...state.banks],
+                // banks: [...state.banks],
                 loading: true
             }
         case 'ADD_BANKS':
-            return {
-                ...state,
-                banks: action.banks,
+            return { ...state, banks: [...state.banks, action.payload],
         }
         case 'DELETE_BANKS':
             const deletingBank = state.banks.filter(
@@ -22,3 +20,5 @@ const banksReducer = (state = {banks: [], loading: false}, action) => {
 }
 
 export default banksReducer;
+
+// state is a key of banks 

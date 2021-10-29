@@ -13,12 +13,15 @@ import Biography from './components/Biography';
 
 class App extends Component {
 
-  // state = {
-  //   banks: [],
-  // }
+  state = {
+    banks: [],
+  }
   
   componentDidMount(){
-    fetchBanks();
+    // fetchBanks();
+    fetch('http://localhost:3000/banks') 
+    .then(resp => resp.json())
+    .then(banks => this.props.fetchBanksDispatch(banks)) // dispatching action to a reducer
   }
 
   render(){
@@ -50,15 +53,17 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
     banks: state.banks,
-    // loading: state.loading
+    // gives me a prop of .banks
+    // Getting info out of the store == gives me value of state // state can be a prop of container
+    
   }
 }
-// connect to global state to pass part of the state to the component as a prop
 
 
 const mapDispatchToProps = (globalDispatch) => {
   return {
-    fetchBanksDispatch: () => globalDispatch(fetchBanks()),
+    // fetchBanksDispatch: () => globalDispatch(fetchBanks()),
+    fetchBanksDispatch: (banks) => globalDispatch({type: 'ADD_BANKS', payload: banks}),
     // fetchBanksDispatch: (dataObject) => globalDispatch(fetchBanks(dataObject)),
     // deletingBank: () => globalDispatch(deletingBank())
   }
