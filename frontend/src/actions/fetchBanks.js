@@ -1,15 +1,15 @@
+export const loadBanks = (banks) => ({type: 'ADD_BANKS', payload: banks});
+export const deleteBanks = (banks) => ({type: 'DELETE_BANKS', payload: banks});
+
 export function fetchBanks() {
      return (dispatch) => {
-        dispatch({ type: 'LOADING_BANKS' });
+      //   dispatch({ type: 'LOADING_BANKS' });
         fetch('http://localhost:3000/banks') 
        .then(resp => resp.json())
-       .then(banks => this.props.fetchBanksDispatch(banks))
+       .then(json => dispatch(loadBanks(json)))
       //  .then((resp) => dispatch({type: 'ADD_BANKS', banks: resp.bank}))
     }
 }
-
-export const loadBanks = (banks) => ({type: 'ADD_BANKS', payload: banks});
-export const deleteBanks = (banks) => ({type: 'DELETE_BANKS', payload: banks});
 
 // export function fetchNewData(formData) {
 //    const configObj = {

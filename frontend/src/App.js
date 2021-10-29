@@ -60,7 +60,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (globalDispatch) => {
   return {
     // fetchBanksDispatch: () => globalDispatch(fetchBanks()),
-    fetchBanksDispatch: (banks) => globalDispatch(loadBanks(banks)),
+    loadBanks: (banks) => globalDispatch(loadBanks(banks)),
     // fetchBanksDispatch: (dataObject) => globalDispatch(fetchBanks(dataObject)),
     // deletingBank: () => globalDispatch(deletingBank())
   }
