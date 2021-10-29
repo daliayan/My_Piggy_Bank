@@ -23,6 +23,10 @@ export default class FundCard extends Component {
                                 { <h1>{this.props.dollars}</h1>}
                         </div>
                 </div>
+                <br></br>
+                <div className="fund-text">
+                        CLICK ON DOLLARS BELOW TO ADD $$ TO YOUR PIGGY BANK
+                </div>
                 
                 <div>
                         <p id="one-bill" className="photo"> $1

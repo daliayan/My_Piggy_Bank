@@ -36,7 +36,6 @@ export default class BankForm extends Component {
                 }       
         })
     }
-    // , () => console.log(this.state)
 
 
     handleSubmit(event) {
@@ -55,7 +54,7 @@ export default class BankForm extends Component {
         })
         .then(resp => resp.json())
         // .then(data => {debugger});
-        // window.location.replace('http://localhost:3001')
+        window.location.replace('http://localhost:3001')
         // window.location.reload(false);
         // sessionStorage.clear()
         // sessionStorage.setItem()
@@ -82,8 +81,7 @@ export default class BankForm extends Component {
                     <br></br>
                     <div>
                         <FundCard dollars={this.state.fund} updateBankFund={this.handleFunds} id="fund"/>
-                    </div>
-                    <div>
+
                         <button className="form-button" type="submit">
                             Create Piggy Bank
                         </button>
