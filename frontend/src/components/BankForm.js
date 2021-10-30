@@ -5,55 +5,57 @@ import {createBank} from '../actions/fetchBanks';
 
 class BankForm extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            name: '',
-            gender: '',
-            fund: 0
-        };
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         name: '',
+    //         gender: '',
+    //         fund: 0
+    //     };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleName = this.handleName.bind(this);
-        this.handleFunds = this.handleFunds.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    // state = {
-    //     name: '',
-    //     gender: '',
-    //     fund: 0
+    //     this.handleChange = this.handleChange.bind(this);
+    //     this.handleName = this.handleName.bind(this);
+    //     this.handleFunds = this.handleFunds.bind(this);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
     // }
-
-    handleName(event){
-        this.setState({
-            name: event.target.value
-        })
+    state = {
+        name: '',
+        gender: '',
+        fund: 0
     }
 
-    // handleFormChange(event) {
-    //     const name = event.target.name
-    //     const gender = event.target.gender
-    //     const fund = event.target.fund
+    // handleName(event){
     //     this.setState({
-    //         name: event.target.value,
-    //         gender: event.target.value,
-    //         fund: event.target.value
+    //         name: event.target.value
     //     })
     // }
 
-    handleChange(event){
+    handleFormChange = (event) => {
+        const name = event.target.name;
+        const gender = event.target.gender;
+        const fund = event.target.fund;
+        const value = event.target.value
+   
         this.setState({
-            gender: event.target.value,
+            [name]: value,
+            [gender]: value,
+            [fund]: value
         })
     }
 
-    handleFunds(addedMoney){
-        this.setState( (state) => {
-                return {
-                       fund: addedMoney + state.fund
-                }       
-        })
-    }
+    // handleChange(event){
+    //     this.setState({
+    //         gender: event.target.value,
+    //     })
+    // }
+
+    // handleFunds(addedMoney){
+    //     this.setState( (state) => {
+    //             return {
+    //                    fund: addedMoney + state.fund
+    //             }       
+    //     })
+    // }
 
 
     handleSubmit(event) {
@@ -61,6 +63,12 @@ class BankForm extends Component {
 
         const submittedData = {...this.state};
         this.props.createBanks(submittedData);
+
+        this.setState({
+            name: '',
+            gender: '',
+            fund: ''
+        })
 
         // const submittedData = this.state;
         // this.setState({bankData: submittedData});
@@ -94,19 +102,19 @@ class BankForm extends Component {
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label>NAME: </label>
-                        <input id="name" type="text" value={this.name} onChange={this.handleName} required/>
+                        <input id="name" type="text" value={this.state.name} onChange={this.handleFormChange} required/>
                     </div>
                     <br></br>
                     <div className="piggy-bank-form-dropdown">
                         <label >GENDER: </label>
-                        <select id="gender" value={this.gender} onChange={this.handleChange} >
+                        <select id="gender" value={this.state.gender} onChange={this.handleFormChange} >
                             <option>GIRL</option>
                             <option>BOY</option>
                         </select>
                     </div>
                     <br></br>
                     <div>
-                        <FundCard dollars={this.state.fund} updateBankFund={this.handleFunds} id="fund"/>
+                        <FundCard dollars={this.state.fund} updateBankFund={this.handleFormChange} id="fund"/>
 
                         <button className="form-button" type="submit">
                             Create Piggy Bank
