@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {fetchBanks} from '../actions/fetchBanks'
 
 class BankList extends Component {
 
@@ -6,6 +8,7 @@ class BankList extends Component {
         fetch('http://localhost:3000/banks') 
         .then(resp => resp.json())
         .then(banks => this.setState({bankData: banks} ))
+        // this.props.fetchBanks()
             //this.setState({bankData: banks} ))
         //(banks => this.props.fetchBanksDispatch(banks))
             // need to set up my action to dispatch
@@ -79,4 +82,4 @@ class BankList extends Component {
     }
 }
 
-export default BankList;
+export default connect(null, {fetchBanks})(BankList);

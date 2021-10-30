@@ -24,7 +24,6 @@ export function createBank(formData) {
           }
          fetch('http://localhost:3000/banks', configObj)
          .then(res => res.json())
-         .then(createBankData => { dispatch(addBanks(createBankData))  
-      })
+         .then(createBankData => { dispatch(addBanks(createBankData))  })
    }  
 }
