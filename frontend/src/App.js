@@ -18,7 +18,8 @@ class App extends Component {
   }
   
   componentDidMount(){
-    fetchBanks();
+    this.props.fetchBanks();
+    // console.log(this.props.fetchBanks)
   }
 
   render(){

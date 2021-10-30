@@ -1,8 +1,10 @@
-const banksReducer = (state = {banks: [], loading: false}, action) => {
+const banksReducer = (state = {banks: []}, action) => {
     switch(action.type){
+        case 'GOT_BANKS': 
+            return {...state, banks: action.payload}
         case 'ADD_BANKS':
             // console.log(action)
-            return { ...state, banks: [...state.banks, action.payload],
+            return { ...state, banks: [...state.banks, action.payload]
         }
         case 'DELETE_BANKS':
             const deletingBank = state.banks.filter(
