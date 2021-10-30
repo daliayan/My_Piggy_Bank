@@ -17,10 +17,10 @@ class App extends Component {
   //   banks: [],
   // }
   
-  componentDidMount(){
-    this.props.fetchBanks(); // asyncronous action
-    // console.log(this.props.fetchBanks)
-  }
+  // componentDidMount(){
+  //   this.props.fetchBanks(); // asyncronous action
+  //   // console.log(this.props.fetchBanks)
+  // }
 
   render(){
     return (
@@ -48,28 +48,30 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    banks: state.banks,
-    // gives me a prop of .banks
-    // Getting info out of the store == gives me value of state // state can be a prop of container
+// const mapStateToProps = (state) => {
+//   return {
+//     banks: state.banks,
+//     // gives me a prop of .banks
+//     // Getting info out of the store == gives me value of state // state can be a prop of container
     
-  }
-}
+//   }
+// }
 
 
-const mapDispatchToProps = (globalDispatch) => {
-  return {
-    // fetchBanksDispatch: () => globalDispatch(fetchBanks()),
-    fetchBanks: () => globalDispatch(fetchBanks()),
-    // fetchBanksDispatch: (dataObject) => globalDispatch(fetchBanks(dataObject)),
-    // deletingBank: () => globalDispatch(deletingBank())
-  }
-}
+// const mapDispatchToProps = (globalDispatch) => {
+//   return {
+//     // fetchBanksDispatch: () => globalDispatch(fetchBanks()),
+//     fetchBanks: () => globalDispatch(fetchBanks()),
+//     // fetchBanksDispatch: (dataObject) => globalDispatch(fetchBanks(dataObject)),
+//     // deletingBank: () => globalDispatch(deletingBank())
+//   }
+// }
 //to update+change the global state
 
 // handleRemoveBanks = (dispatch) => {
 //   deleteBanks: () => dispatch('DELETE_BANKS')
 // }
 
-export default (connect(mapStateToProps, mapDispatchToProps)(App));
+export default (App);
+//(connect(null, mapDispatchToProps)
+// (App));

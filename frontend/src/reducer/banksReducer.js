@@ -1,6 +1,7 @@
 const banksReducer = (state = {banks: []}, action) => { // state is a key of banks 
     switch(action.type){
         case 'GOT_BANKS': 
+            console.log(action)
             return {...state, banks: action.payload}
         case 'ADD_BANKS':
             // console.log(action)

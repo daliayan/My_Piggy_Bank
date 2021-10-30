@@ -4,10 +4,9 @@ import {fetchBanks} from '../actions/fetchBanks'
 
 class BankList extends Component {
 
-    componentDidMount(){
-        fetch('http://localhost:3000/banks') 
-        .then(resp => resp.json())
-        .then(banks => this.setState({bankData: banks} ))  // need to set up my action to dispatch
+        // fetch('http://localhost:3000/banks') 
+        // .then(resp => resp.json())
+        // .then(banks => this.setState({bankData: banks} ))  // need to set up my action to dispatch
         // .then(json => this.props.fetchBanks(json))
         // this.props.fetchBanks()
             //this.setState({bankData: banks} ))
@@ -16,10 +15,18 @@ class BankList extends Component {
             //  this.setState({bankData: banks} ))
     
         // .then(banks => this.props.fetchBanksDispatch(banks)) // dispatching action to a reducer
-    }
+    // }
 
     state = {
         bankData: []
+    }
+
+    fetchBankData(bankData) {
+        this.setState((state) => {
+            return {
+                banks: [...state.banks, bankData]
+            }
+        })
     }
 
     deleteBank(bank){
@@ -40,25 +47,41 @@ class BankList extends Component {
     };
     
 
-    formData = {
-        name: this.name,
-        gender: this.gender,
-        fund: this.fund
+    // formData = {
+    //     name: this.name,
+    //     gender: this.gender,
+    //     fund: this.fund
+    // }
+    // fetchNewData(formData) {
+    //     const configObj = {
+    //         method: "POST",
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Accept': 'application/json'
+    //         },
+    //         body: JSON.stringify(formData)
+    //     };
+
+    //     fetch('http://localhost:3000/banks', configObj)
+    //     .then(resp => resp.json)
+    //     .then(createBankData => this.setState({createBankData}))
+    // }
+
+    mapBanks(){
+        return this.props.banks.map((bank) => <div className="bank-list-data">
+        <ol>
+         {bank.name} is a {bank.gender} 🐖 with ${bank.fund} 💰 
+         {/* {props.bank.name} */}
+            <button onClick={() => {this.deleteBank(bank)}}  key={bank.key} className="delete-button" >
+                DELETE
+            </button>
+        </ol>
+        </div>)
     }
 
-    fetchNewData(formData) {
-        const configObj = {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        };
-
-        fetch('http://localhost:3000/banks', configObj)
-        .then(resp => resp.json)
-        .then(createBankData => this.setState({createBankData}))
+    componentDidMount(){
+        this.props.fetchBanks();
+        console.log(this.props.fetchBanks)
     }
 
     render(){
@@ -68,17 +91,28 @@ class BankList extends Component {
                     ALL PIGGY BANKS
                 </h2>
 
-                {this.state.bankData.map((bank) => <div className="bank-list-data">
-                <ol>
-                 {bank.name} is a {bank.gender} 🐖 with ${bank.fund} 💰 
-                    <button onClick={() => {this.deleteBank(bank)}}  key={bank.key} className="delete-button" >
-                        DELETE
-                    </button>
-                </ol>
-                </div>)}
+                {this.mapBanks()}
             </div>
         )
     }
 }
 
-export default connect(null, {fetchBanks})(BankList);
+const mapStateToProps = (state) => {
+    return {
+      banks: state.banks,
+      // gives me a prop of .banks
+      // Getting info out of the store == gives me value of state // state can be a prop of container
+      
+    }
+}
+
+const mapDispatchToProps = (globalDispatch) => {
+    return {
+      // fetchBanksDispatch: () => globalDispatch(fetchBanks()),
+      fetchBanks: () => globalDispatch(fetchBanks()),
+      // fetchBanksDispatch: (dataObject) => globalDispatch(fetchBanks(dataObject)),
+      // deletingBank: () => globalDispatch(deletingBank())
+    }
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(BankList);

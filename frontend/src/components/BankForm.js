@@ -21,14 +21,15 @@ class BankForm extends Component {
     state = {
         name: '',
         gender: '',
-        fund: 0
+        fund: 0,
     }
 
-    // handleName(event){
-    //     this.setState({
-    //         name: event.target.value
-    //     })
-    // }
+
+    handleName(event){
+        this.setState({
+            name: event.target.value
+        })
+    }
 
     handleFormChange = (event) => {
         const name = event.target.name;
@@ -43,19 +44,19 @@ class BankForm extends Component {
         })
     }
 
-    // handleChange(event){
-    //     this.setState({
-    //         gender: event.target.value,
-    //     })
-    // }
+    handleChange(event){
+        this.setState({
+            gender: event.target.value,
+        })
+    }
 
-    // handleFunds(addedMoney){
-    //     this.setState( (state) => {
-    //             return {
-    //                    fund: addedMoney + state.fund
-    //             }       
-    //     })
-    // }
+    handleFunds(addedMoney){
+        this.setState( (state) => {
+                return {
+                       fund: addedMoney + state.fund
+                }       
+        })
+    }
 
 
     handleSubmit(event) {
