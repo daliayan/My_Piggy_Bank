@@ -61,8 +61,8 @@ class BankForm extends Component {
     handleSubmit(event) {
         event.preventDefault();
 
-        // const submittedData = {...this.state};
-        // this.props.createBanks(submittedData);
+        const submittedData = {...this.state};
+        this.props.createBank(submittedData);
 
         // this.setState({
         //     name: '',
@@ -70,22 +70,22 @@ class BankForm extends Component {
         //     fund: ''
         // })
 
-        const submittedData = this.state;
-        this.setState({bankData: submittedData});
+        // const submittedData = this.state;
+        // this.setState({bankData: submittedData});
 
-        fetch('http://localhost:3000/banks', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(submittedData),
-        })
-        .then(resp => resp.json())
+        // fetch('http://localhost:3000/banks', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Accept': 'application/json'
+        //     },
+        //     body: JSON.stringify(submittedData),
+        // })
+        // .then(resp => resp.json())
 
-        .then(json => {
-            this.setState({submittedData: json})
-        })
+        // .then(json => {
+        //     this.setState({submittedData: json})
+        // })
         // .then(data => {debugger});
 
         window.location.replace('http://localhost:3001')
