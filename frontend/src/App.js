@@ -16,7 +16,6 @@ class App extends Component {
   // state = {
   //   banks: [],
   // }
-  
   // componentDidMount(){
   //   this.props.fetchBanks(); // asyncronous action
   //   // console.log(this.props.fetchBanks)
