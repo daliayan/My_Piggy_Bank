@@ -5,57 +5,57 @@ import {createBank} from '../actions/fetchBanks';
 
 class BankForm extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            name: '',
-            gender: '',
-            fund: 0
-        };
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         name: '',
+    //         gender: '',
+    //         fund: 0
+    //     };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleName = this.handleName.bind(this);
-        this.handleFunds = this.handleFunds.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    // state = {
-    //     name: '',
-    //     gender: '',
-    //     fund: 0
+    //     this.handleChange = this.handleChange.bind(this);
+    //     this.handleName = this.handleName.bind(this);
+    //     this.handleFunds = this.handleFunds.bind(this);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
     // }
-
-    handleName(event){
-        this.setState({
-            name: event.target.value
-        })
+    state = {
+        name: '',
+        gender: '',
+        fund: 0
     }
 
-    // handleFormChange = (event) => {
-    //     const name = event.target.name;
-    //     const gender = event.target.gender;
-    //     const fund = event.target.fund;
-    //     const value = event.target.value
-   
+    // handleName(event){
     //     this.setState({
-    //         [name]: value,
-    //         [gender]: value,
-    //         [fund]: value
+    //         name: event.target.value
     //     })
     // }
 
-    handleChange(event){
+    handleFormChange = (event) => {
+        const name = event.target.name;
+        const gender = event.target.gender;
+        const fund = event.target.fund;
+        const value = event.target.value
+   
         this.setState({
-            gender: event.target.value,
+            [name]: value,
+            [gender]: value,
+            [fund]: value
         })
     }
 
-    handleFunds(addedMoney){
-        this.setState( (state) => {
-                return {
-                       fund: addedMoney + state.fund
-                }       
-        })
-    }
+    // handleChange(event){
+    //     this.setState({
+    //         gender: event.target.value,
+    //     })
+    // }
+
+    // handleFunds(addedMoney){
+    //     this.setState( (state) => {
+    //             return {
+    //                    fund: addedMoney + state.fund
+    //             }       
+    //     })
+    // }
 
 
     handleSubmit(event) {
@@ -63,12 +63,6 @@ class BankForm extends Component {
 
         const submittedData = {...this.state};
         this.props.createBank(submittedData);
-
-        // this.setState({
-        //     name: '',
-        //     gender: '',
-        //     fund: ''
-        // })
 
         // const submittedData = this.state;
         // this.setState({bankData: submittedData});
@@ -83,15 +77,10 @@ class BankForm extends Component {
         // })
         // .then(resp => resp.json())
 
-        // .then(json => {
-        //     this.setState({submittedData: json})
-        // })
-        // .then(data => {debugger});
+        // .then(json => {this.setState({submittedData: json})})
 
         window.location.replace('http://localhost:3001')
         // window.location.reload(false);
-        // sessionStorage.clear()
-        // sessionStorage.setItem()
     }
 
     render(){

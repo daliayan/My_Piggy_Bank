@@ -7,12 +7,11 @@ export function fetchBanks() {
         fetch('http://localhost:3000/banks') 
        .then(resp => resp.json())
        .then(json => dispatch(loadBanks(json))) // dispatching an action to reducer
-      //  .then((resp) => dispatch({type: 'ADD_BANKS', banks: resp.bank}))
     }
 }
 
 
-export function createBank(formData) {
+export const createBank = (formData) => {
    return (dispatch) => {
          const configObj = {
             method: 'POST',
@@ -27,3 +26,20 @@ export function createBank(formData) {
          .then(createBankData => { dispatch(addBanks(createBankData))  })
    }  
 }
+
+// export function deleteBank(bank){
+//    const byePiggy = this.state.bankData.filter(index => index !== bank)
+
+//    const config = {
+//        method: 'DELETE',
+//        headers: {
+//            'Content-Type': 'application/json',
+//            'Accept': 'application/json'
+//        }
+//    }
+
+//    fetch(`http://localhost:3000/banks/${bank.id}`, config)
+//    .then(resp => resp.json())
+//    .then(bankData => this.setState({bankData: byePiggy}))
+
+// };

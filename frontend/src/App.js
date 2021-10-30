@@ -13,12 +13,12 @@ import Biography from './components/Biography';
 
 class App extends Component {
 
-  state = {
-    banks: [],
-  }
+  // state = {
+  //   banks: [],
+  // }
   
   componentDidMount(){
-    this.props.fetchBanks();
+    this.props.fetchBanks(); // asyncronous action
     // console.log(this.props.fetchBanks)
   }
 
