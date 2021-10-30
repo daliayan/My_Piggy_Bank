@@ -20,12 +20,7 @@ class BanksController < ApplicationController
         end
     end
 
-    # def edit
-    #     bank = Bank.find(params[:id])
-    # end
-
     def update
-        # @bank.update(bank_params)
         if @bank.update(bank_params)
             render json: bank
         else
@@ -34,7 +29,6 @@ class BanksController < ApplicationController
     end
 
     def destroy
-        # @bank = Bank.find_by(params[:id])
         @bank.destroy
         render json: {message: "You've successfully deleted #{@bank.name} Piggy Bank"}
     end
@@ -46,6 +40,6 @@ class BanksController < ApplicationController
     end
 
     def bank_params
-        params.require(:bank).permit(:name, :gender, :fund) #might need :amount here but not to create bank????
+        params.require(:bank).permit(:name, :gender, :fund)
     end
 end
