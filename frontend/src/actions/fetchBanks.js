@@ -27,4 +27,4 @@ export function createBank(formData) {
          .then(createBankData => { dispatch(addBanks(createBankData))  
       })
    }  
-  }
+}

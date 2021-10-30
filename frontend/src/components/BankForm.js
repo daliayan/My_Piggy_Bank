@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import FundCard from '../components/FundCard';
-// import {fetchBanks} from './actions/fetchBanks';
+import {createBank} from '../actions/fetchBanks';
 
-export default class BankForm extends Component {
+class BankForm extends Component {
 
     constructor(props){
         super(props);
@@ -41,7 +42,9 @@ export default class BankForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.props.fetchBanksDispatch(this.state);
+
+        const submittedData = {...this.state};
+        this.props.createBanks(submittedData);
 
         // const submittedData = this.state;
         // this.setState({bankData: submittedData});
@@ -98,3 +101,5 @@ export default class BankForm extends Component {
         )
     }
 }
+
+export default connect(null, {createBank})(BankForm);
