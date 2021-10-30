@@ -18,12 +18,28 @@ class BankForm extends Component {
         this.handleFunds = this.handleFunds.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+    // state = {
+    //     name: '',
+    //     gender: '',
+    //     fund: 0
+    // }
 
     handleName(event){
         this.setState({
             name: event.target.value
         })
     }
+
+    // handleFormChange(event) {
+    //     const name = event.target.name
+    //     const gender = event.target.gender
+    //     const fund = event.target.fund
+    //     this.setState({
+    //         name: event.target.value,
+    //         gender: event.target.value,
+    //         fund: event.target.value
+    //     })
+    // }
 
     handleChange(event){
         this.setState({
