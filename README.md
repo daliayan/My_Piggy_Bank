@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# My Piggy Bank || Ruby on Rails Backend + JS ES6, React, Redux Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I created the backend of my application using the command:
+### `rails new backend --api database=postgresql.`
+The front end of this project was created with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description of the Application
 
-In the project directory, you can run:
+I was inspired by the Netflix Hit TV show Squid Games when creating this project. In short, there's a piggy bank that increases in value within the show, and I was inspired to create my own piggy bank. The application allows the user to create their own piggy bank complete with a: name, gender, and monetary value of your choosing.
 
-### `yarn start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Use this link to clone my GitHub repository:
+```bash
+gh repo clone daliayan/My_Piggy_Bank
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+From there in the terminal cd into the backend folder of the application. Once in the correct folder run the following command in your terminal to ensure you have the required gems to run the application:
+```bash
+bundle install
+```
 
-### `yarn test`
+Following this step, you can run the following command to start up the backend server:
+```bash
+rails s
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Now that you have the backend server retrieving data in your webpage, you cd back into the PiggyBank folder. Here you navigate into the frontend folder using the command: cd frontend. Now that you're in the correct folder, you can enter the following command into the terminal to start up the application.
+```bash
+npm install
+npm start
+```
+You now have access to create your own Piggy Banks.
 
-### `yarn build`
+## Contributing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bug reports and pull requests are welcome on GitHub at https://github.com/daliayan/My_Piggy_Bank. This project is intended to be a safe, welcoming space for collaboration, and contributors.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Read & Watch More About My Experience Making This Application
+- My Blog Link: https://daliayan.medium.com/making-piggy-banks-using-react-and-redux-d99007c86772
+- Coding Walk Through:
+- Application Walk Through: https://www.youtube.com/watch?v=sQjwll8Flq4
