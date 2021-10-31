@@ -52,8 +52,6 @@ class BankForm extends Component {
             gender: '',
             fund: ''
         })
-        // window.location.replace('http://localhost:3001')
-        // window.location.reload(false);
     }
 
     render(){

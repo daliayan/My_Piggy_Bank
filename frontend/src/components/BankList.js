@@ -18,9 +18,7 @@ class BankList extends Component {
 
     deleteBank(bank){
         const byePiggy = this.state.bankData.filter(index => index !== bank);
-        //this.state.bankData.filter(index => index !== bank)
         // this.props.deleteBank(byePiggy);
-        // this.setState({bank})
         const config = {
             method: 'DELETE',
             headers: {
@@ -49,7 +47,6 @@ class BankList extends Component {
 
     componentDidMount(){
         this.props.fetchBanks();
-        // console.log(this.props.fetchBanks)
     }
 
     render(){
@@ -58,7 +55,6 @@ class BankList extends Component {
                 <h2>
                     ALL PIGGY BANKS
                 </h2>
-
                 {this.mapBanks()}
             </div>
         )
