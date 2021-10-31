@@ -35,7 +35,7 @@ class BankForm extends Component {
     handleFunds(addedMoney){
         this.setState( (state) => {
                 return {
-                       fund: addedMoney + state.fund
+                    fund: addedMoney + state.fund
                 }       
         })
     }

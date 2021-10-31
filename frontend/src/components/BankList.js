@@ -66,7 +66,6 @@ const mapStateToProps = (state) => {
       banks: state.banks,
       // gives me a prop of .banks
       // Getting info out of the store == gives me value of state // state can be a prop of container
-      
     }
 }
 
@@ -74,6 +73,7 @@ const mapDispatchToProps = (globalDispatch) => {
     return {
       fetchBanks: () => globalDispatch(fetchBanks()),
     }
-  }
+}
+//to update+change the global state
 
 export default connect(mapStateToProps, mapDispatchToProps)(BankList);
