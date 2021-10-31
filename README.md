@@ -1,7 +1,9 @@
 # My Piggy Bank || Ruby on Rails Backend + JS ES6, React, Redux Frontend
 
 I created the backend of my application using the command:
-### `rails new backend --api database=postgresql.`
+```bash
+rails new backend --api database=postgresql.
+```
 The front end of this project was created with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Description of the Application
