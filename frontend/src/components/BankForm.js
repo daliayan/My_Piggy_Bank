@@ -93,7 +93,6 @@ class BankForm extends Component {
     }
 
     render(){
-        // const {name, gender, fund} = this.state
         return (
             <div>
                 <form onSubmit={this.handleSubmit} >
