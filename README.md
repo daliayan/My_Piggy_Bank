@@ -44,5 +44,5 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Read & Watch More About My Experience Making This Application
 - My Blog Link: https://daliayan.medium.com/making-piggy-banks-using-react-and-redux-d99007c86772
-- Coding Walk Through:
+- Coding Walk Through: https://www.youtube.com/watch?v=qMwGWgAyqg8
 - Application Walk Through: https://www.youtube.com/watch?v=sQjwll8Flq4
