@@ -27,19 +27,19 @@ export const createBank = (formData) => {
    }  
 }
 
-// export function deleteBank(bank){
-//    const byePiggy = this.state.bankData.filter(index => index !== bank)
+export function deleteBank(bank){
+   return (dispatch) => {
+   // const byePiggy = this.state.bankData.filter(index => index !== bank)
+   const configObj = {
+       method: 'DELETE',
+       headers: {
+           'Content-Type': 'application/json',
+           'Accept': 'application/json'
+       }
+   }
 
-//    const config = {
-//        method: 'DELETE',
-//        headers: {
-//            'Content-Type': 'application/json',
-//            'Accept': 'application/json'
-//        }
-//    }
-
-//    fetch(`http://localhost:3000/banks/${bank.id}`, config)
-//    .then(resp => resp.json())
-//    .then(bankData => this.setState({bankData: byePiggy}))
-
-// };
+   fetch(`http://localhost:3000/banks/${bank.id}`, configObj)
+   .then(resp => resp.json())
+   .then(json => { dispatch(deleteBanks(json))  })
+   }
+};
