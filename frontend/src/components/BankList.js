@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {fetchBanks, deleteBank} from '../actions/fetchBanks'
+import {fetchBanks} from '../actions/fetchBanks'
 
 class BankList extends Component {
 
@@ -17,19 +17,22 @@ class BankList extends Component {
     }
 
     deleteBank(bank){
-        const byePiggy = this.state.bankData.filter(index => index !== bank)
-        return this.props.deleteBank(byePiggy);
-        // const config = {
-        //     method: 'DELETE',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Accept': 'application/json'
-        //     }
-        // }
+        const byePiggy = this.state.bankData.filter(index => index !== bank);
+        //this.state.bankData.filter(index => index !== bank)
+        // this.props.deleteBank(byePiggy);
+        // this.setState({bank})
+        const config = {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }
 
-        // fetch(`http://localhost:3000/banks/${bank.id}`, config)
-        // .then(resp => resp.json())
-        // .then(bankData => this.setState({bankData: byePiggy}))
+        fetch(`http://localhost:3000/banks/${bank.id}`, config)
+        .then(resp => resp.json())
+        .then(bankData => this.setState({bankData: byePiggy}))
+        window.location.replace('http://localhost:3001')
 
     };
 
@@ -46,7 +49,7 @@ class BankList extends Component {
 
     componentDidMount(){
         this.props.fetchBanks();
-        console.log(this.props.fetchBanks)
+        // console.log(this.props.fetchBanks)
     }
 
     render(){
