@@ -32,27 +32,6 @@ class BankList extends Component {
         // .then(bankData => this.setState({bankData: byePiggy}))
 
     };
-    
-
-    formData = {
-        name: this.name,
-        gender: this.gender,
-        fund: this.fund
-    }
-    fetchNewData(formData) {
-        const configObj = {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        };
-
-        fetch('http://localhost:3000/banks', configObj)
-        .then(resp => resp.json)
-        .then(createBankData => this.setState({createBankData}))
-    }
 
     mapBanks(){
         return this.props.banks.map((bank) => <div className="bank-list-data">
@@ -94,10 +73,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (globalDispatch) => {
     return {
-      // fetchBanksDispatch: () => globalDispatch(fetchBanks()),
       fetchBanks: () => globalDispatch(fetchBanks()),
-      // fetchBanksDispatch: (dataObject) => globalDispatch(fetchBanks(dataObject)),
-      // deletingBank: () => globalDispatch(deletingBank())
     }
   }
 

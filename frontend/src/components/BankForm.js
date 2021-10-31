@@ -18,11 +18,6 @@ class BankForm extends Component {
         this.handleFunds = this.handleFunds.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    // state = {
-    //     name: '',
-    //     gender: '',
-    //     fund: 0,
-    // }
 
 
     handleName(event){
@@ -30,21 +25,6 @@ class BankForm extends Component {
             name: event.target.value
         })
     }
-
-    // handleFormChange = (event) => {
-    //     const name = event.target.name
-    //     // const gender = event.target.gender;
-    //     // const fund = event.target.fund;
-    //     const value = event.target.value
-   
-    //     this.setState({
-    //         [name]: value,
-    //         // // [gender]: value,
-    //         // // [fund]: value
-    //         // name: event.target.value,
-    //         // gender: event.target.value,
-    //     })
-    // }
 
     handleChange(event){
         this.setState({
@@ -72,22 +52,6 @@ class BankForm extends Component {
             gender: '',
             fund: ''
         })
-
-        // const submittedData = this.state;
-        // this.setState({bankData: submittedData});
-
-        // fetch('http://localhost:3000/banks', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Accept': 'application/json'
-        //     },
-        //     body: JSON.stringify(submittedData),
-        // })
-        // .then(resp => resp.json())
-
-        // .then(json => {this.setState({submittedData: json})})
-
         // window.location.replace('http://localhost:3001')
         // window.location.reload(false);
     }
