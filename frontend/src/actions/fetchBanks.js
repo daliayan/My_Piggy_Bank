@@ -6,7 +6,7 @@ export function fetchBanks() {
      return (dispatch) => {
         fetch('http://localhost:3000/banks') 
        .then(resp => resp.json())
-       .then(json => dispatch(loadBanks(json))) // dispatching an action to reducer
+       .then(json => dispatch(loadBanks(json)))
     }
 }
 
@@ -29,7 +29,6 @@ export const createBank = (formData) => {
 
 export function deleteBank(bank){
    return (dispatch) => {
-   // const byePiggy = this.state.bankData.filter(index => index !== bank)
    const configObj = {
        method: 'DELETE',
        headers: {

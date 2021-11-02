@@ -1,4 +1,4 @@
-const banksReducer = (state = {banks: []}, action) => { // state is a key of banks 
+const banksReducer = (state = {banks: []}, action) => {
     switch(action.type){
         case 'GOT_BANKS': 
             return {...state, banks: action.payload}

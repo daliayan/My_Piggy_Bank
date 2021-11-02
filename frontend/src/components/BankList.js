@@ -18,7 +18,6 @@ class BankList extends Component {
 
     deleteBank(bank){
         const byePiggy = this.state.bankData.filter(index => index !== bank);
-        // this.props.deleteBank(byePiggy);
         const config = {
             method: 'DELETE',
             headers: {
@@ -64,8 +63,6 @@ class BankList extends Component {
 const mapStateToProps = (state) => {
     return {
       banks: state.banks,
-      // gives me a prop of .banks
-      // Getting info out of the store == gives me value of state // state can be a prop of container
     }
 }
 
@@ -74,6 +71,6 @@ const mapDispatchToProps = (globalDispatch) => {
       fetchBanks: () => globalDispatch(fetchBanks()),
     }
 }
-//to update+change the global state
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(BankList);
