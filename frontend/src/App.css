@@ -117,12 +117,10 @@
   margin: 0 auto;
   margin-bottom: 12px;
   display: flex;
-  /* justify-content: center; */
 }
 
 .fund-container{
   display: inline-block;
-  /* justify-content: center; */
   margin: 15px;
   padding: 5px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -130,7 +128,6 @@
 
 .fund-text{
   font-size: 22px;
-  /* text-align: center; */
 }
 
 .photo{
