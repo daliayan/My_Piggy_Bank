@@ -5,7 +5,6 @@ REQUIREMENTS
 
 - [x]Follow the instructions on this repo to setup the generator: create-react-app(Links to an external site.)
 
-
 - [x]Your app should have one HTML page to render your react-redux application
 
 - [x]There should be 5 stateless components

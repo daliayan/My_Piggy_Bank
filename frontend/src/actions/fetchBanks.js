@@ -11,7 +11,7 @@ export function fetchBanks() {
 }
 
 
-export const createBank = (formData) => {
+export function createBank(formData){
    return (dispatch) => {
          const configObj = {
             method: 'POST',
