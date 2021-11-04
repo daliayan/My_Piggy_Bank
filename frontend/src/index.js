@@ -11,11 +11,9 @@ import thunk from 'redux-thunk';
 const makeBankFunction = createStore(banksReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
-  // <React.StrictMode>
     <Provider store={makeBankFunction}>
       <App />
     </Provider>,
-  // </React.StrictMode>,
   document.getElementById('root')
 );
 
