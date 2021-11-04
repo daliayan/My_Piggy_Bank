@@ -5,7 +5,7 @@ import {fetchBanks} from '../actions/fetchBanks'
 class BankList extends Component {
 
     state = {
-        bankData: []
+        bankData: [],
     }
 
     fetchBankData(bankData) {
