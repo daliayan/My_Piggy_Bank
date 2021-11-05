@@ -10,7 +10,6 @@ export function fetchBanks() {
     }
 }
 
-
 export function createBank(formData){
    return (dispatch) => {
          const configObj = {
@@ -36,7 +35,6 @@ export function deleteBank(bank){
            'Accept': 'application/json'
        }
    }
-
    fetch(`http://localhost:3000/banks/${bank.id}`, configObj)
    .then(resp => resp.json())
    .then(json => { dispatch(deleteBanks(json))  })
