@@ -40,7 +40,6 @@ class BankForm extends Component {
         })
     }
 
-
     handleSubmit(event) {
         event.preventDefault();
 
