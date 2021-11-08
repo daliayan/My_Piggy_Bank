@@ -2,9 +2,9 @@ import {Component} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import  Header from './components/Header';
+import BankList from './components/BankList';
+import BankForm from './components/BankForm';
 import  NavBar from './components/NavBar';
-import BankContainer from './containers/BankContainer';
-import BankFormContainer from './containers/BankFormContainer';
 import About from './components/About';
 import Biography from './components/Biography';
 
@@ -27,8 +27,8 @@ class App extends Component {
 
           <Switch>
             <> 
-              <BankContainer />
-              <BankFormContainer />
+              <BankList />
+              <BankForm />
             </>
           </Switch>
         </Router>

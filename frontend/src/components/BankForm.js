@@ -19,11 +19,10 @@ class BankForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-
     handleName(event){
         this.setState({
             name: event.target.value
-        })
+        }, console.log(this.state))
     }
 
     handleChange(event){
@@ -34,9 +33,9 @@ class BankForm extends Component {
 
     handleFunds(addedMoney){
         this.setState( (state) => {
-                return {
-                    fund: addedMoney + state.fund
-                }       
+            return {
+                fund: addedMoney + state.fund
+            }       
         })
     }
 

@@ -50,7 +50,7 @@ class BankList extends Component {
 
     render(){
         return (
-            <div>
+            <div id="bank-container" className="bank-container">
                 <h2>
                     ALL PIGGY BANKS
                 </h2>

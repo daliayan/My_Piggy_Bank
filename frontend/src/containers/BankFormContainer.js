@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BankForm from '../components/BankForm';
+// import BankForm from '../components/BankForm';
 
 class BankFormContainer extends Component {
   
@@ -7,7 +7,7 @@ class BankFormContainer extends Component {
     render(){
         return (
         <div id="bank-container">
-            <BankForm />
+            {/* <BankForm /> */}
         </div>
         )
     }
