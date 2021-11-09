@@ -7,6 +7,7 @@ import BankForm from './components/BankForm';
 import  NavBar from './components/NavBar';
 import About from './components/About';
 import Biography from './components/Biography';
+import OrderedBanks from './components/OrderedBanks';
 
 
 class App extends Component {
@@ -24,6 +25,9 @@ class App extends Component {
             <Biography />
           </Route>
           <Route path="/banks" />
+          {/* <Route path="/order">
+            <OrderedBanks />
+          </Route> */}
 
           <Switch>
             <> 

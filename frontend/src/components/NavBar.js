@@ -15,8 +15,12 @@ export default class NavBar extends Component {
         </NavLink>
 
         <NavLink to="/biography" >
-          CREATOR BIOGRAPHY 🐷
+          CREATOR BIOGRAPHY |
         </NavLink>
+
+        {/* <NavLink to="/order" >
+          456 🐷
+        </NavLink> */}
 
       </div>
     )
