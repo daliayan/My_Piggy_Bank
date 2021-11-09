@@ -11,7 +11,7 @@ import hundred from '../images/money/hundred.jpg';
 export default class FundCard extends Component {
 
         AddMoney(event){
-                this.props.updateBankFund(parseInt(event.target.value))
+                this.props.updateBankFund(parseInt(event.target.value), console.log('clicked'))
         }
 
        render(){
