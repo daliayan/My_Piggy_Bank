@@ -7,7 +7,7 @@ import BankForm from './components/BankForm';
 import  NavBar from './components/NavBar';
 import About from './components/About';
 import Biography from './components/Biography';
-import OrderedBanks from './components/OrderedBanks';
+// import OrderedBanks from './components/OrderedBanks';
 
 
 class App extends Component {

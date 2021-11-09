@@ -22,7 +22,8 @@ class BankForm extends Component {
     handleName(event){
         this.setState({
             name: event.target.value
-        }, console.log(this.state))
+        })
+        //, console.log(this.state))
     }
 
     handleChange(event){
