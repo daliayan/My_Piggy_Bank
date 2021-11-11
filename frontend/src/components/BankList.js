@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {fetchBanks} from '../actions/fetchBanks'
+import {fetchBanks} from '../actions/fetchBanks';
+import LikeButton from '../components/LikeButton'
 
 class BankList extends Component {
 
     state = {
         bankData: [],
-        likes: 0
     }
 
     fetchBankData(bankData) {
@@ -34,10 +34,6 @@ class BankList extends Component {
 
     };
 
-    clickedThing(){
-         console.log('clicked')
-    }
-
     mapBanks(){
         return this.props.banks.map((bank) => <div className="bank-list-data">
         <ol>
@@ -45,19 +41,10 @@ class BankList extends Component {
             <button onClick={() => {this.deleteBank(bank)}}  key={bank.key} className="delete-button" >
                 DELETE
             </button>
-            {/* <button onClick={this.clickedThing} onChange={this.likerIncreasing}> 00</button> */}
+            <LikeButton/>
         </ol>
         </div>)
     }
-
-    // likerIncreasing(){
-
-    // }
-
-    // likerInput(event){
-    //     this.likerIncreasing({
-    //         likes: event.target.value})
-    // }
 
     componentDidMount(){
         this.props.fetchBanks();
@@ -69,10 +56,6 @@ class BankList extends Component {
                 <h2>
                     ALL PIGGY BANKS
                 </h2>
-                <div>
-                    {/* <input placeholder="add # here" onChange={this.likerInput}></input> */}
-                    {/* onClick={(event) => {this.props.likerInput}} */}
-                </div>
                 {this.mapBanks()}
             </div>
         )

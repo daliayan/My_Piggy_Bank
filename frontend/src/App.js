@@ -30,7 +30,7 @@ class App extends Component {
           </Route> */}
 
           <Switch>
-            <> 
+            <>
               <BankList />
               <BankForm />
             </>
