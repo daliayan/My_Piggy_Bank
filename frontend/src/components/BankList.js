@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {fetchBanks} from '../actions/fetchBanks';
-import LikeButton from '../components/LikeButton'
+// import LikeButton from '../components/LikeButton'
 
 class BankList extends Component {
 
@@ -41,7 +41,7 @@ class BankList extends Component {
             <button onClick={() => {this.deleteBank(bank)}}  key={bank.key} className="delete-button" >
                 DELETE
             </button>
-            <LikeButton/>
+            {/* <LikeButton/> */}
         </ol>
         </div>)
     }
