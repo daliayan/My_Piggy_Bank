@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {fetchBanks} from '../actions/fetchBanks';
 // import LikeButton from '../components/LikeButton'
+// import AdderButton from '../components/AdderButton'
 
 class BankList extends Component {
 
@@ -42,6 +43,7 @@ class BankList extends Component {
                 DELETE
             </button>
             {/* <LikeButton/> */}
+            {/* <AdderButton /> */}
         </ol>
         </div>)
     }
